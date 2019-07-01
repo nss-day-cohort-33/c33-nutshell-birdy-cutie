@@ -1,33 +1,26 @@
 {
   "users": [
     {
-      "id" : 1,
-      "username" : "tcarp55",
-      "email" : "new@gmail.com",
+      "id": 1,
+      "username": "tcarp55",
+      "email": "new@gmail.com",
       "password": "thisthing"
     },
     {
-    "id" : 2,
-    "username" : "DannyPants",
-    "email" : "dude@gmail.com",
-    "password": "otherThing"
+      "id": 2,
+      "username": "DannyPants",
+      "email": "dude@gmail.com",
+      "password": "otherThing"
     }
-
   ],
-  "friends" : [
+  "friends": [],
+  "articles": [
     {
       "id": 1,
       "userId": 1,
-      "friendId": 2 
-    }
-  ],
-  "articles": [
-    {
-      "id" : 1,
-      "userId" : 1,
-      "url" : "https://www.cnbc.com/2019/07/01/here-are-the-biggest-stock-winners-from-the-us-china-trade-ceasefire.html",
-      "title" : "Here are the biggest stock winners from the US-China trade ceasefire",
-      "synopsis" : "somethings happened"
+      "url": "https://www.cnbc.com/2019/07/01/here-are-the-biggest-stock-winners-from-the-us-china-trade-ceasefire.html",
+      "title": "Here are the biggest stock winners from the US-China trade ceasefire",
+      "synopsis": "somethings happened"
     }
   ],
   "events": [
@@ -44,10 +37,10 @@
       "id": 1,
       "userId": 1,
       "task": "clean",
-      "iscompleted" : false
+      "iscompleted": false
     }
   ],
-  "message": [
+  "messages": [
     {
       "id": 1,
       "userId": 1,
