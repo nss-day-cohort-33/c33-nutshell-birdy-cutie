@@ -8,7 +8,7 @@ function welcomeComponent() {
     let registerButton = document.createElement("button")
     registerButton.setAttribute("id", "reg-btn")
     welcomeHeader.textContent = "Welcome to Nutshell!"
-    registerHeader.textcontent = "Please register"
+    registerHeader.textContent = "Please register"
     registerButton.textContent = "Click Here"
     welcomeDiv.appendChild(welcomeHeader)
     welcomeDiv.appendChild(registerHeader)
