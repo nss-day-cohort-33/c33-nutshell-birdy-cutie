@@ -11,6 +11,24 @@
       "username": "DannyPants",
       "email": "dude@gmail.com",
       "password": "otherThing"
+    },
+    {
+      "username": "Scott",
+      "email": "123@mail.com",
+      "password": "wewae",
+      "id": 3
+    },
+    {
+      "username": "Scott",
+      "email": "yoy",
+      "password": "wewae",
+      "id": 4
+    },
+    {
+      "username": "awewe",
+      "email": "sdfs",
+      "password": "wewae",
+      "id": 5
     }
   ],
   "friends": [],
