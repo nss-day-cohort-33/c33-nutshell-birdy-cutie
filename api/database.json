@@ -1,19 +1,50 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "username": "tcarp55",
+      "email": "new@gmail.com",
+      "password": "thisthing"
+    },
+    {
+      "id": 2,
+      "username": "DannyPants",
+      "email": "dude@gmail.com",
+      "password": "otherThing"
     }
   ],
-  "comments": [
+  "friends": [],
+  "articles": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "userId": 1,
+      "url": "https://www.cnbc.com/2019/07/01/here-are-the-biggest-stock-winners-from-the-us-china-trade-ceasefire.html",
+      "title": "Here are the biggest stock winners from the US-China trade ceasefire",
+      "synopsis": "somethings happened"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "event_name": "running",
+      "date": "2019-07-01",
+      "location": "nashville"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "task": "clean",
+      "iscompleted": false
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "i did cool things today"
+    }
+  ]
 }
