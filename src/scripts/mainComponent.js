@@ -104,4 +104,6 @@ function createNav () {
     dashContainer.appendChild(createDashboard())
   }
 
-  DashToDOM()
+//   DashToDOM()
+
+  export {createNav, createDashboard}

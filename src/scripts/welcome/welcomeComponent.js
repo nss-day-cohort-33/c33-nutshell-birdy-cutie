@@ -1,3 +1,9 @@
+import { API } from "../api";
+import { mainEntryToDom } from "../mainEntryToDom";
+import { createDashboard,createNav } from "../mainComponent";
+
+const domContainer = document.querySelector("#dashboard-container")
+
 function welcomeComponent() {
     let welcomeDiv =  document.createElement("div")
     welcomeDiv.setAttribute("id", "welcome-div")
@@ -10,6 +16,9 @@ function welcomeComponent() {
     welcomeHeader.textContent = "Welcome to Nutshell!"
     registerHeader.textContent = "Please register"
     registerButton.textContent = "Click Here"
+    registerButton.addEventListener("click", event => {
+        domContainer.appendChild(registerFormComponent())
+    })
     welcomeDiv.appendChild(welcomeHeader)
     welcomeDiv.appendChild(registerHeader)
     welcomeDiv.appendChild(registerButton)
@@ -35,18 +44,48 @@ function registerFormComponent() {
     let labelEmail = document.createElement("label")
     labelEmail.textContent = "Email"
     let labelPassword = document.createElement("label")
-    password.textContent = "Password"
+    labelPassword.textContent = "Password"
     let fieldsetUserName = document.createElement("fieldset")
     let fieldsetEmail = document.createElement("fieldset")
     let fieldsetPassword = document.createElement("fieldset")
-    fieldsetUserName.appendChild(userName)
+    let regSubmitBtn = document.createElement("button")
+    regSubmitBtn.setAttribute("id", "reg-submit-btn")
+    regSubmitBtn.textContent = "Submit"
+    regSubmitBtn.addEventListener("click", event => {
+        event.preventDefault()
+        let newUser = userName.value
+        let newEmail = email.value
+        let newPassword = password.value
+        if (newUser && newEmail && newPassword){
+            API.addData("users", createNewUser(newUser, newEmail, newPassword))
+            .then(data => {
+                domContainer.innerHTML = ""
+                mainEntryToDom(createNav(), createDashboard())})
+        }
+        else{
+            alert("Please fill out all fields!")
+        }
+
+    })
     fieldsetUserName.appendChild(labelUserName)
-    fieldsetEmail.appendChild(email)
+    fieldsetUserName.appendChild(userName)
     fieldsetEmail.appendChild(labelEmail)
-    fieldsetPassword.appendChild(password)
+    fieldsetEmail.appendChild(email)
     fieldsetPassword.appendChild(labelPassword)
+    fieldsetPassword.appendChild(password)
     registerDiv.appendChild(fieldsetUserName)
     registerDiv.appendChild(fieldsetEmail)
     registerDiv.appendChild(fieldsetPassword)
+    registerDiv.appendChild(regSubmitBtn)
     return registerDiv
 }
+
+function createNewUser(username, email, password){
+    return {
+        username,
+        email,
+        password
+    }
+}
+
+export {welcomeComponent}
