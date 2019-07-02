@@ -29,6 +29,12 @@
       "email": "sdfs",
       "password": "wewae",
       "id": 5
+    },
+    {
+      "username": "awewe",
+      "email": "123@gmail.com",
+      "password": "wewae",
+      "id": 6
     }
   ],
   "friends": [],
