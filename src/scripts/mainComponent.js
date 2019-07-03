@@ -1,3 +1,5 @@
+import {addEventForm} from "./events/addEventFormToDOM.js"
+import {welcomeComponent} from "./welcome/welcomeComponent.js"
 import { taskFormComponent } from "./tasks/taskForm";
 import { messageBtnListener } from "./chat/chatEvent";
 
@@ -29,6 +31,7 @@ function createNav () {
     navBar.appendChild(taskButton)
     navBar.appendChild(friendButton)
 
+
     //add event listeners to all Nav Bar Buttons
     dashButton.addEventListener("click", () => {
       console.log(event)
@@ -37,7 +40,7 @@ function createNav () {
       articleClick()
     })
     eventButton.addEventListener("click", () => {
-      console.log(event)
+      addEventForm()
     })
     taskButton.addEventListener("click", () => {
       taskFormComponent()
@@ -107,13 +110,8 @@ function createNav () {
 
 
     //function to add dom components
-    function DashToDOM () {
-
+    function dashToDOM () {
       let dashContainer = document.querySelector("#dashboard-container")
-    dashContainer.appendChild(createNav())
-    dashContainer.appendChild(createDashboard())
+      dashContainer.appendChild(welcomeComponent())
   }
-
-//   DashToDOM()
-
-  export {createNav, createDashboard}
+  export {createNav, createDashboard, dashToDOM}
