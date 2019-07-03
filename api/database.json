@@ -53,6 +53,18 @@
       "email": "t@email.com",
       "password": "123",
       "id": 10
+    },
+    {
+      "username": "Dustin",
+      "email": "o ",
+      "password": "please",
+      "id": 11
+    },
+    {
+      "username": "test",
+      "email": "test",
+      "password": "test",
+      "id": 12
     }
   ],
   "friends": [],
@@ -89,11 +101,53 @@
       "id": 2
     },
     {
-      "userId": 27,
+      "userId": 21,
       "task": "test",
       "completedate": "2019-01-01",
       "iscompleted": false,
       "id": 3
+    },
+    {
+      "userId": 21,
+      "task": "other test",
+      "completedate": "2019-01-01",
+      "iscompleted": false,
+      "id": 4
+    },
+    {
+      "userId": 11,
+      "task": "new task",
+      "completedate": "2019-01-01",
+      "iscompleted": false,
+      "id": 5
+    },
+    {
+      "userId": 11,
+      "task": "another one",
+      "completedate": "2019-01-01",
+      "iscompleted": false,
+      "id": 6
+    },
+    {
+      "userId": 11,
+      "task": "one more",
+      "completedate": "2019-01-01",
+      "iscompleted": false,
+      "id": 7
+    },
+    {
+      "userId": 12,
+      "task": "task",
+      "completedate": "2019-01-02",
+      "iscompleted": false,
+      "id": 8
+    },
+    {
+      "userId": 12,
+      "task": "another",
+      "completedate": "2019-01-01",
+      "iscompleted": false,
+      "id": 9
     }
   ],
   "messages": [
