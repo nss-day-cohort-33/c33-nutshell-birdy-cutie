@@ -1,4 +1,8 @@
 //function to create Nav Bar component
+import { createArticleForm, createSubmitArticleBtn } from "./article/helperFunctions.js"
+
+const domContainer = document.querySelector("#dashboard-container")
+
 function createNav () {
     let navBar = document.createElement("nav")
     let dashButton = document.createElement("button")
@@ -27,7 +31,10 @@ function createNav () {
       console.log(event)
     })
     articleButton.addEventListener("click", () => {
-      console.log(event)
+      let articleForm = createArticleForm()
+      domContainer.innerHTML = articleForm
+      domContainer.appendChild(createSubmitArticleBtn())
+
     })
     eventButton.addEventListener("click", () => {
       console.log(event)
