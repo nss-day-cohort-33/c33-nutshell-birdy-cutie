@@ -74,7 +74,6 @@ function registerFormComponent() {
                 API.getData("users").then( newData => storage(newData, createdUser))
                 domContainer.innerHTML = ""
                 mainEntryToDom(createNav(), createDashboard())})
-
         }
         else{
             alert("Please fill out all fields!")
