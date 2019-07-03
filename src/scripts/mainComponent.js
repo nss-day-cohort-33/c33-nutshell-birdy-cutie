@@ -1,3 +1,5 @@
+import { messageBtnListener } from "./chat/chatEvent";
+
 //function to create Nav Bar component
 import { articleClick } from "./article/mainArticle.js"
 
@@ -68,6 +70,9 @@ function createNav () {
       let postMessageBtn = document.createElement("button")
       postMessageBtn.setAttribute("id", "post-message")
       postMessageBtn.textContent = "Post to Chat"
+      postMessageBtn.addEventListener("click", event => {
+        messageBtnListener()
+      })
 
       //create chat/articles/events/tasks columns sections of dashboard
       let dashColumnsSection = document.createElement("section")

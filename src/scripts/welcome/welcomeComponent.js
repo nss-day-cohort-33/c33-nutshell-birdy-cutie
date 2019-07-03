@@ -29,8 +29,6 @@ const storage = ( userData, createdData) => {
         if (user.username === createdData.username) {
             sessionStorage.setItem("userId", user.id)
             let userID = sessionStorage.getItem("userId")
-            console.log( "userData: ", user);
-            console.log( "createdData: ", createdData);
             console.log("userID: ", userID);
         }
 
