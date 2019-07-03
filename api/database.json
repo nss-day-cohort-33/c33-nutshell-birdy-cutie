@@ -53,18 +53,6 @@
       "email": "t@email.com",
       "password": "123",
       "id": 10
-    },
-    {
-      "username": "Dustin",
-      "email": "o ",
-      "password": "please",
-      "id": 11
-    },
-    {
-      "username": "test",
-      "email": "test",
-      "password": "test",
-      "id": 12
     }
   ],
   "friends": [],
@@ -86,24 +74,6 @@
       "location": "nashville",
       "time": "16:00",
       "timestamp": "2019-6-2 14:47:14.571 +03:00"
-    },
-    {
-      "userId": 14,
-      "event_name": "Compiled",
-      "date": "2019-07-23",
-      "time": "00:12",
-      "location": "1",
-      "timestamp": "2019-7-3 12:26:33.112 +03:00",
-      "id": 2
-    },
-    {
-      "userId": 14,
-      "event_name": "No Stacking",
-      "date": "0011-01-11",
-      "time": "11:11",
-      "location": "just work",
-      "timestamp": "2019-7-3 12:27:0.325 +03:00",
-      "id": 3
     }
   ],
   "tasks": [
@@ -112,62 +82,6 @@
       "userId": 1,
       "task": "clean",
       "iscompleted": false
-    },
-    {
-      "userId": 27,
-      "task": "More clean",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 2
-    },
-    {
-      "userId": 21,
-      "task": "test",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 3
-    },
-    {
-      "userId": 21,
-      "task": "other test",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 4
-    },
-    {
-      "userId": 11,
-      "task": "new task",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 5
-    },
-    {
-      "userId": 11,
-      "task": "another one",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 6
-    },
-    {
-      "userId": 11,
-      "task": "one more",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 7
-    },
-    {
-      "userId": 12,
-      "task": "task",
-      "completedate": "2019-01-02",
-      "iscompleted": false,
-      "id": 8
-    },
-    {
-      "userId": 12,
-      "task": "another",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 9
     }
   ],
   "messages": [
