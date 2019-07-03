@@ -1,6 +1,11 @@
 import { taskFormComponent } from "./tasks/taskForm";
+import { messageBtnListener } from "./chat/chatEvent";
 
 //function to create Nav Bar component
+import { articleClick } from "./article/mainArticle.js"
+
+const domContainer = document.querySelector("#dashboard-container")
+
 function createNav () {
     let navBar = document.createElement("nav")
     let dashButton = document.createElement("button")
@@ -29,7 +34,7 @@ function createNav () {
       console.log(event)
     })
     articleButton.addEventListener("click", () => {
-      console.log(event)
+      articleClick()
     })
     eventButton.addEventListener("click", () => {
       console.log(event)
@@ -66,6 +71,9 @@ function createNav () {
       let postMessageBtn = document.createElement("button")
       postMessageBtn.setAttribute("id", "post-message")
       postMessageBtn.textContent = "Post to Chat"
+      postMessageBtn.addEventListener("click", event => {
+        messageBtnListener()
+      })
 
       //create chat/articles/events/tasks columns sections of dashboard
       let dashColumnsSection = document.createElement("section")

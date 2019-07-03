@@ -152,9 +152,11 @@
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": 1,
-      "message": "i did cool things today"
+      "userId": "13",
+      "username": "yum",
+      "message": "buddy",
+      "timestamp": "2019-07-03T01:17:39.325Z",
+      "id": 1
     }
   ]
 }
