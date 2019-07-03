@@ -7,4 +7,3 @@ function mainEntryToDom(func1,func2){
     domContainer.appendChild(func2)
 }
 export {mainEntryToDom}
-
