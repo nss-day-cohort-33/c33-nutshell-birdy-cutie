@@ -1,3 +1,4 @@
+import { taskFormComponent } from "./tasks/taskForm";
 import { messageBtnListener } from "./chat/chatEvent";
 
 //function to create Nav Bar component
@@ -39,7 +40,7 @@ function createNav () {
       console.log(event)
     })
     taskButton.addEventListener("click", () => {
-      console.log(event)
+      taskFormComponent()
     })
     friendButton.addEventListener("click", () => {
       console.log(event)
