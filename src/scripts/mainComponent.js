@@ -1,3 +1,5 @@
+import { taskFormComponent } from "./tasks/taskForm";
+
 //function to create Nav Bar component
 function createNav () {
     let navBar = document.createElement("nav")
@@ -33,7 +35,7 @@ function createNav () {
       console.log(event)
     })
     taskButton.addEventListener("click", () => {
-      console.log(event)
+      taskFormComponent()
     })
     friendButton.addEventListener("click", () => {
       console.log(event)
