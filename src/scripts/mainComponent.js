@@ -1,3 +1,5 @@
+import {addEventForm} from "./addEvent.js"
+
 //function to create Nav Bar component
 function createNav () {
     let navBar = document.createElement("nav")
@@ -22,6 +24,7 @@ function createNav () {
     navBar.appendChild(taskButton)
     navBar.appendChild(friendButton)
 
+
     //add event listeners to all Nav Bar Buttons
     dashButton.addEventListener("click", () => {
       console.log(event)
@@ -30,7 +33,9 @@ function createNav () {
       console.log(event)
     })
     eventButton.addEventListener("click", () => {
-      console.log(event)
+      const domContainer = document.querySelector("#dashboard-container")
+      domContainer.innerHTML = ""
+      domContainer.appendChild(addEventForm())
     })
     taskButton.addEventListener("click", () => {
       console.log(event)

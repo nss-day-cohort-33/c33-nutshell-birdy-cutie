@@ -71,7 +71,9 @@
       "userId": 1,
       "event_name": "running",
       "date": "2019-07-01",
-      "location": "nashville"
+      "location": "nashville",
+      "time": "16:00",
+      "timestamp": "2019-6-2 14:47:14.571 +03:00"
     }
   ],
   "tasks": [
