@@ -17,6 +17,7 @@ function welcomeComponent() {
     registerHeader.textContent = "Please register"
     registerButton.textContent = "Click Here"
     registerButton.addEventListener("click", event => {
+        document.getElementById("reg-btn").style.visibility = "hidden"
         domContainer.appendChild(registerFormComponent())
     })
     welcomeDiv.appendChild(welcomeHeader)
@@ -29,8 +30,6 @@ const storage = ( userData, createdData) => {
         if (user.username === createdData.username) {
             sessionStorage.setItem("userId", user.id)
             let userID = sessionStorage.getItem("userId")
-            console.log( "userData: ", user);
-            console.log( "createdData: ", createdData);
             console.log("userID: ", userID);
         }
 
