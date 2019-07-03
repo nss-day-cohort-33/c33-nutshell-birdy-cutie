@@ -24,7 +24,16 @@ function welcomeComponent() {
     welcomeDiv.appendChild(registerButton)
     return welcomeDiv
 }
+const storage = ( userData, createdData) => {
+    userData.forEach( user => {
+        if (user.username === createdData.username) {
+            sessionStorage.setItem("userId", user.id)
+            let userID = sessionStorage.getItem("userId")
+            console.log("userID: ", userID);
+        }
 
+    });
+}
 function registerFormComponent() {
     let registerDiv = document.createElement("form")
     let userName = document.createElement("input")
@@ -57,10 +66,13 @@ function registerFormComponent() {
         let newEmail = email.value
         let newPassword = password.value
         if (newUser && newEmail && newPassword){
-            API.addData("users", createNewUser(newUser, newEmail, newPassword))
+            let createdUser = createNewUser(newUser, newEmail, newPassword)
+            API.addData("users", createdUser)
             .then(data => {
+                API.getData("users").then( newData => storage(newData, createdUser))
                 domContainer.innerHTML = ""
                 mainEntryToDom(createNav(), createDashboard())})
+
         }
         else{
             alert("Please fill out all fields!")
