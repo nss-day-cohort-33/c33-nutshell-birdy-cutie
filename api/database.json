@@ -59,6 +59,18 @@
       "email": "user1@email.com",
       "password": "pass123",
       "id": 11
+    },
+    {
+      "username": "AnothaOne",
+      "email": "wedabest@email.com",
+      "password": "passwerd",
+      "id": 12
+    },
+    {
+      "username": "fix HTML Stacking",
+      "email": "nostack@email.com",
+      "password": "stopstack",
+      "id": 13
     }
   ],
   "friends": [],
@@ -89,6 +101,42 @@
       "location": "NSS Classroom 1",
       "timestamp": "2019-7-3 0:28:2.627 +03:00",
       "id": 2
+    },
+    {
+      "userId": "12",
+      "event_name": "Watch Caps for Cohort 32",
+      "date": "2019-07-02",
+      "time": "09:00",
+      "location": "NSS Hackery",
+      "timestamp": "2019-7-3 0:39:6.396 +03:00",
+      "id": 3
+    },
+    {
+      "userId": "12",
+      "event_name": "Add sessionStorage",
+      "date": "2019-07-03",
+      "time": "15:30",
+      "location": "NSS Hackery",
+      "timestamp": "2019-7-3 0:39:57.193 +03:00",
+      "id": 4
+    },
+    {
+      "userId": "13",
+      "event_name": "No More Stacking",
+      "date": "2019-07-03",
+      "time": "00:41",
+      "location": "House",
+      "timestamp": "2019-7-3 0:41:39.559 +03:00",
+      "id": 5
+    },
+    {
+      "userId": "13",
+      "event_name": "It Worked",
+      "date": "2019-07-03",
+      "time": "00:41",
+      "location": "Kitchen",
+      "timestamp": "2019-7-3 0:42:6.631 +03:00",
+      "id": 6
     }
   ],
   "tasks": [

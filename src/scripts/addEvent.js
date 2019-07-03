@@ -160,12 +160,12 @@ const addEventToDB = () => {
         let timeValue = timeKey.value
         let locationValue = locationKey.value
         domContainer.innerHTML = ""
+        mainEntryToDom(createNav(), createDashboard())
         let newEventObj = createEventObj(userIdKey, event_nameValue, dateValue, timeValue, locationValue, timestampKey)
         API.addData("events", newEventObj).then( data => {
             API.getData("events").then( data => {
                let usrEvent =  filterUserEvents(data)
                usrEvent.forEach( dataForDOM => {
-                   mainEntryToDom(createNav(), createDashboard())
                    addEventsToDOM(dataForDOM)
                });
             })
