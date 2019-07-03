@@ -53,6 +53,12 @@
       "email": "t@email.com",
       "password": "123",
       "id": 10
+    },
+    {
+      "username": "NewUser1",
+      "email": "user1@email.com",
+      "password": "pass123",
+      "id": 11
     }
   ],
   "friends": [],
@@ -74,6 +80,15 @@
       "location": "nashville",
       "time": "16:00",
       "timestamp": "2019-6-2 14:47:14.571 +03:00"
+    },
+    {
+      "userId": "11",
+      "event_name": "Present Nutshell",
+      "date": "2019-07-18",
+      "time": "13:30",
+      "location": "NSS Classroom 1",
+      "timestamp": "2019-7-3 0:28:2.627 +03:00",
+      "id": 2
     }
   ],
   "tasks": [

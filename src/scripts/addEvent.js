@@ -174,6 +174,7 @@ const addEventForm = () => {
     let createEvent = document.createElement("button")
     let id = sessionStorage.getItem("userId")
     createEvent.setAttribute("id", "create-event")
+    createEvent.innerHTML = "Save Event"
     createEvent.addEventListener("click", addEventToDB)
     eventFormSection.setAttribute("id", "event-form")
     eventFormSection.innerHTML = `
