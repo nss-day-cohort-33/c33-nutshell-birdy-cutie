@@ -38,11 +38,13 @@ function createSubmitArticleBtn(){
     SubmitBtn.setAttribute("id", "article-submit-btn")
     SubmitBtn.textContent = "Submit"
     SubmitBtn.addEventListener("click", event => {
+        let userId = +sessionStorage.getItem("userId")
         let title = document.getElementById("article-title").value
         let url = document.getElementById("article-url").value
         let synopsis = document.getElementById("article-synopsis").value
         let date = document.getElementById("article-date").value
-        let newArticle = createArticle(title, url, synopsis, date)
+        let newArticle = createArticle(userId,title, url, synopsis, date)
+        console.log(newArticle)
         API.addData("articles",newArticle)
         .then( data => {
             domContainer.innerHTML = ""
@@ -54,9 +56,9 @@ function createSubmitArticleBtn(){
     return SubmitBtn
 }
 
-function createArticle(title,url,synopsis,date){
+function createArticle(userId,title,url,synopsis,date){
     return {
-        userId: 1,
+        userId,
         title,
         url,
         synopsis,
