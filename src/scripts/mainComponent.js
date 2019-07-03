@@ -1,11 +1,18 @@
 import {addEventForm} from "./events/addEventFormToDOM.js"
 import { taskFormComponent } from "./tasks/taskForm";
 import { messageBtnListener } from "./chat/chatEvent";
+import { dashToDOM } from "./mainEntryToDom.js"
 
 //function to create Nav Bar component
 import { articleClick } from "./article/mainArticle.js"
 
 const domContainer = document.querySelector("#dashboard-container")
+
+const logOutFunc = () => {
+  sessionStorage.clear()
+  domContainer.innerHTML = ""
+  dashToDOM()
+}
 
 function createNav () {
     let navBar = document.createElement("nav")
@@ -14,11 +21,14 @@ function createNav () {
     let eventButton = document.createElement("button")
     let taskButton = document.createElement("button")
     let friendButton = document.createElement("button")
+    let logOutButton = document.createElement("button")
+    logOutButton.textContent = "Log Out"
     dashButton.textContent = "My Dashboard"
     articleButton.textContent = "Add Article"
     eventButton.textContent = "Add Event"
     taskButton.textContent = "Add Task"
     friendButton.textContent = "Friends List"
+    logOutButton.setAttribute("id", "lgt-btn")
     dashButton.setAttribute("id", "dash-btn")
     articleButton.setAttribute("id", "article-btn")
     eventButton.setAttribute("id", "event-btn")
@@ -29,6 +39,7 @@ function createNav () {
     navBar.appendChild(eventButton)
     navBar.appendChild(taskButton)
     navBar.appendChild(friendButton)
+    navBar.appendChild(logOutButton)
 
 
     //add event listeners to all Nav Bar Buttons
@@ -46,6 +57,9 @@ function createNav () {
     })
     friendButton.addEventListener("click", () => {
       console.log(event)
+    })
+    logOutButton.addEventListener("click", () => {
+      logOutFunc()
     })
     return navBar
     }
