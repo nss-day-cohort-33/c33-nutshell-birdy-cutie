@@ -55,22 +55,28 @@
       "id": 10
     },
     {
-      "username": "NewUser1",
-      "email": "user1@email.com",
-      "password": "pass123",
+      "username": "1",
+      "email": "1",
+      "password": "1",
       "id": 11
     },
     {
-      "username": "AnothaOne",
-      "email": "wedabest@email.com",
-      "password": "passwerd",
+      "username": "1",
+      "email": "1",
+      "password": "1",
       "id": 12
     },
     {
-      "username": "fix HTML Stacking",
-      "email": "nostack@email.com",
-      "password": "stopstack",
+      "username": "1",
+      "email": "1",
+      "password": "1",
       "id": 13
+    },
+    {
+      "username": "1",
+      "email": "1",
+      "password": "1",
+      "id": 14
     }
   ],
   "friends": [],
@@ -94,49 +100,22 @@
       "timestamp": "2019-6-2 14:47:14.571 +03:00"
     },
     {
-      "userId": "11",
-      "event_name": "Present Nutshell",
-      "date": "2019-07-18",
-      "time": "13:30",
-      "location": "NSS Classroom 1",
-      "timestamp": "2019-7-3 0:28:2.627 +03:00",
+      "userId": 14,
+      "event_name": "Compiled",
+      "date": "2019-07-23",
+      "time": "00:12",
+      "location": "1",
+      "timestamp": "2019-7-3 12:26:33.112 +03:00",
       "id": 2
     },
     {
-      "userId": "12",
-      "event_name": "Watch Caps for Cohort 32",
-      "date": "2019-07-02",
-      "time": "09:00",
-      "location": "NSS Hackery",
-      "timestamp": "2019-7-3 0:39:6.396 +03:00",
+      "userId": 14,
+      "event_name": "No Stacking",
+      "date": "0011-01-11",
+      "time": "11:11",
+      "location": "just work",
+      "timestamp": "2019-7-3 12:27:0.325 +03:00",
       "id": 3
-    },
-    {
-      "userId": "12",
-      "event_name": "Add sessionStorage",
-      "date": "2019-07-03",
-      "time": "15:30",
-      "location": "NSS Hackery",
-      "timestamp": "2019-7-3 0:39:57.193 +03:00",
-      "id": 4
-    },
-    {
-      "userId": "13",
-      "event_name": "No More Stacking",
-      "date": "2019-07-03",
-      "time": "00:41",
-      "location": "House",
-      "timestamp": "2019-7-3 0:41:39.559 +03:00",
-      "id": 5
-    },
-    {
-      "userId": "13",
-      "event_name": "It Worked",
-      "date": "2019-07-03",
-      "time": "00:41",
-      "location": "Kitchen",
-      "timestamp": "2019-7-3 0:42:6.631 +03:00",
-      "id": 6
     }
   ],
   "tasks": [

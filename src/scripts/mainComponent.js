@@ -1,4 +1,6 @@
-import {addEventForm} from "./addEvent.js"
+import {addEventForm} from "./events/addEventFormToDOM.js"
+import {welcomeComponent} from "./welcome/welcomeComponent.js"
+
 
 //function to create Nav Bar component
 function createNav () {
@@ -33,9 +35,7 @@ function createNav () {
       console.log(event)
     })
     eventButton.addEventListener("click", () => {
-      const domContainer = document.querySelector("#dashboard-container")
-      domContainer.innerHTML = ""
-      domContainer.appendChild(addEventForm())
+      addEventForm()
     })
     taskButton.addEventListener("click", () => {
       console.log(event)
@@ -102,13 +102,8 @@ function createNav () {
 
 
     //function to add dom components
-    function DashToDOM () {
-
+    function dashToDOM () {
       let dashContainer = document.querySelector("#dashboard-container")
-    dashContainer.appendChild(createNav())
-    dashContainer.appendChild(createDashboard())
+      dashContainer.appendChild(welcomeComponent())
   }
-
-//   DashToDOM()
-
-  export {createNav, createDashboard, DashToDOM}
+  export {createNav, createDashboard, dashToDOM}

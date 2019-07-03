@@ -1,5 +1,2 @@
-
-import {mainEntryToDom} from "./mainEntryToDom.js"
-import {welcomeComponent} from "./welcome/welcomeComponent.js"
-
-mainEntryToDom(welcomeComponent())
+import {dashToDOM} from "./mainComponent.js"
+dashToDOM ()
