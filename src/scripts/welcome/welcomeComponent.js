@@ -17,6 +17,7 @@ function welcomeComponent() {
     registerHeader.textContent = "Please register"
     registerButton.textContent = "Click Here"
     registerButton.addEventListener("click", event => {
+        document.getElementById("reg-btn").style.visibility = "hidden"
         domContainer.appendChild(registerFormComponent())
     })
     welcomeDiv.appendChild(welcomeHeader)
