@@ -1,5 +1,4 @@
 import {addEventForm} from "./events/addEventFormToDOM.js"
-import {welcomeComponent} from "./welcome/welcomeComponent.js"
 import { taskFormComponent } from "./tasks/taskForm";
 import { messageBtnListener } from "./chat/chatEvent";
 
@@ -109,9 +108,5 @@ function createNav () {
     }
 
 
-    //function to add dom components
-    function dashToDOM () {
-      let dashContainer = document.querySelector("#dashboard-container")
-      dashContainer.appendChild(welcomeComponent())
-  }
-  export {createNav, createDashboard, dashToDOM}
+
+  export {createNav, createDashboard}

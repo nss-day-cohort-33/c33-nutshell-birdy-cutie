@@ -15,14 +15,25 @@ function welcomeComponent() {
     registerButton.setAttribute("id", "reg-btn")
     welcomeHeader.textContent = "Welcome to Nutshell!"
     registerHeader.textContent = "Please register"
-    registerButton.textContent = "Click Here"
+    registerButton.textContent = "Click Here To Register"
     registerButton.addEventListener("click", event => {
         document.getElementById("reg-btn").style.visibility = "hidden"
+        document.getElementById("lgn-btn").style.visibility = "hidden"
         domContainer.appendChild(registerFormComponent())
+    })
+    let loginButton = document.createElement("button")
+    loginButton.setAttribute("id", "lgn-btn")
+    loginButton.textContent = "Log In"
+    loginButton.addEventListener("click", () => {
+        document.getElementById("reg-btn").style.visibility = "hidden"
+        document.getElementById("lgn-btn").style.visibility = "hidden"
+        document.getElementById("registerHeader").style.visibility = "hidden"
+        domContainer.appendChild(loginFormComponent())
     })
     welcomeDiv.appendChild(welcomeHeader)
     welcomeDiv.appendChild(registerHeader)
     welcomeDiv.appendChild(registerButton)
+    welcomeDiv.appendChild(loginButton)
     return welcomeDiv
 }
 const storage = ( userData, createdData) => {
@@ -91,6 +102,35 @@ function registerFormComponent() {
     registerDiv.appendChild(fieldsetPassword)
     registerDiv.appendChild(regSubmitBtn)
     return registerDiv
+}
+
+const loginFormComponent = () => {
+    let loginForm = document.createElement("form")
+    let loginFieldset = document.createElement("fieldset")
+    let loginLegend = document.createElement("legend")
+    loginLegend.setAttribute("id", "lgn-legend")
+    loginLegend.textContent = "Log In Here:"
+    let userNameInput = document.createElement("input")
+    userNameInput.setAttribute("placeholder", "Username")
+    userNameInput.setAttribute("type", "text")
+    userNameInput.setAttribute("name", "user-name-login")
+    userNameInput.setAttribute("id", "user-name-login")
+    let passwordInput = document.createElement("input")
+    passwordInput.setAttribute("placeholder", "Password")
+    passwordInput.setAttribute("type", "text")
+    passwordInput.setAttribute("name", "password-login")
+    passwordInput.setAttribute("id", "password-login")
+    let submitLoginBtn = document.createElement("button")
+    submitLoginBtn.textContent = "Log In"
+    submitLoginBtn.addEventListener("click", () => {
+        console.log("submitLoginBtn clicked!");
+    })
+    loginFieldset.appendChild(loginLegend)
+    loginFieldset.appendChild(userNameInput)
+    loginFieldset.appendChild(passwordInput)
+    loginFieldset.appendChild(submitLoginBtn)
+    loginForm.appendChild(loginFieldset)
+    return loginForm
 }
 
 function createNewUser(username, email, password){
