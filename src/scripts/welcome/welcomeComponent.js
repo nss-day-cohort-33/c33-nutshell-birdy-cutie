@@ -44,7 +44,21 @@ const storage = ( userData, createdData) => {
             console.log("userID: ", userID);
         }
 
+
     });
+}
+const loginValidation = (userData, username, password) => {
+    let wrongUsers = ""
+    userData.forEach( user => {
+        if (user.username === username && user.password === password) {
+            wrongUsers = "true"
+            domContainer.innerHTML = ""
+            sessionStorage.setItem("userId", user.id)
+            let loginID = sessionStorage.getItem("userId")
+            mainEntryToDom(createNav(), createDashboard())
+        }
+    });
+    return wrongUsers
 }
 function registerFormComponent() {
     let registerDiv = document.createElement("form")
@@ -123,7 +137,15 @@ const loginFormComponent = () => {
     let submitLoginBtn = document.createElement("button")
     submitLoginBtn.textContent = "Log In"
     submitLoginBtn.addEventListener("click", () => {
-        console.log("submitLoginBtn clicked!");
+        event.preventDefault()
+        let usrnmValue = userNameInput.value
+        let pswdValue = passwordInput.value
+        API.getData("users").then( newData => {
+            let userString = loginValidation(newData, usrnmValue, pswdValue)
+            if (userString === "" ) {
+                alert("Username and Password do not match!")
+            }
+        })
     })
     loginFieldset.appendChild(loginLegend)
     loginFieldset.appendChild(userNameInput)
