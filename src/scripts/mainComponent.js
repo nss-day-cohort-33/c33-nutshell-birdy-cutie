@@ -111,4 +111,4 @@ function createNav () {
 
 //   DashToDOM()
 
-  export {createNav, createDashboard}
+  export {createNav, createDashboard, DashToDOM}
