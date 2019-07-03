@@ -1,4 +1,4 @@
-import { createArticleForm, createSubmitArticleBtn } from "./articleHelperFunctions.js/index.js"
+import { createArticleForm, createSubmitArticleBtn } from "./articleHelperFunctions.js"
 
 const domContainer = document.querySelector("#dashboard-container")
 
