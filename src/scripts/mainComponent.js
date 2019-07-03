@@ -1,6 +1,10 @@
 import { messageBtnListener } from "./chat/chatEvent";
 
 //function to create Nav Bar component
+import { articleClick } from "./article/mainArticle.js"
+
+const domContainer = document.querySelector("#dashboard-container")
+
 function createNav () {
     let navBar = document.createElement("nav")
     let dashButton = document.createElement("button")
@@ -29,7 +33,7 @@ function createNav () {
       console.log(event)
     })
     articleButton.addEventListener("click", () => {
-      console.log(event)
+      articleClick()
     })
     eventButton.addEventListener("click", () => {
       console.log(event)
