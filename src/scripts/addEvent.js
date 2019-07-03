@@ -2,7 +2,7 @@ import {API} from "./api.js"
 import {createNav, createDashboard, DashToDom} from "./mainComponent.js"
 import {mainEntryToDom} from "./mainEntryToDom.js"
 
-// created a function that gets the full date of the click
+// created a function that gets the full date of the click being used as createTimeStamp() argument
 
 const clickDate = () => {
     let date = new Date()
@@ -11,6 +11,7 @@ const clickDate = () => {
 // create function to get offset time zone
 // made timeZoneOffset into a string then targeted the first number of that string
 // then used slice to recombine it
+// Being called in createTimeStamp()
 const timeZoneOffset = ( zoneOffset) => {
     let zoneString = `${zoneOffset}`
     let zoneSplit = zoneString.charAt(0)
@@ -32,7 +33,7 @@ const timeZoneOffset = ( zoneOffset) => {
         }
     }
 }
-// created a funtction that create a timeStamp into a string
+// created a funtction that create a timeStamp into a string being called in addEventToDB()
 
 const createTimeStamp = (date) => {
     let timeStampYear = date.getFullYear()
@@ -48,6 +49,7 @@ const createTimeStamp = (date) => {
 }
 
 // created a function to filter through events that has to do with specific userId
+// Being called in addEventToDB()
 
 const filterUserEvents = ( eventData) => {
     let userEvents =  eventData.filter( events => {
@@ -60,6 +62,7 @@ const filterUserEvents = ( eventData) => {
 }
 
 // create factory function to turn event forum input values into an object that will then be pushed to DB
+// being called in addEventToDB()
 
 const createEventObj = (userId, event_name, date, time, location, timestamp) => {
     let factoryEventObj = {
@@ -75,6 +78,7 @@ const createEventObj = (userId, event_name, date, time, location, timestamp) => 
 }
 
 // create funtion that makes HTML snippet to add events to DOM
+// being called in addEventsToDOM()
 
 const eventsHTML = ( eventData) => {
     let newHTML = document.createElement("article")
@@ -101,6 +105,7 @@ const eventsHTML = ( eventData) => {
 }
 
 // create event listener function for delete event button
+// being called in eventsHTML()
 
 const delBtnListener = ( btn) => {
     btn.addEventListener("click", () => {
@@ -112,6 +117,8 @@ const delBtnListener = ( btn) => {
 }
 
 // create event listener function for edit event button
+// being called in eventsHTML()
+
 
 const editBtnListener = ( btn) => {
 btn.addEventListener("click", () => {
@@ -125,6 +132,7 @@ btn.addEventListener("click", () => {
 
 
 // created a function that adds userEvents to the DOM also created delete and edi buttons IF we get there
+//being called in addEventToDB()
 
 const addEventsToDOM = (dataObj) => {
     let eventLog = document.querySelector("#event-div")
@@ -134,6 +142,7 @@ const addEventsToDOM = (dataObj) => {
 }
 
 // create function that adds the new event to the database and then get updated DB and add to DOM
+// being called in addEventForm()
 
 const addEventToDB = () => {
     let newTimeStamp = createTimeStamp(clickDate())
@@ -168,6 +177,7 @@ const addEventToDB = () => {
 
 // created function that adds an Event form HTML on click with the button using the function addEventToDB()
 // returns just the form section, so you still need to append child within the actual event
+// being exported to mainComponent.js to be called in the eventButton.eventListener()
 
 const addEventForm = () => {
     let eventFormSection = document.createElement("section")
