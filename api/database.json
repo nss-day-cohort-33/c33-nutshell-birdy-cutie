@@ -53,6 +53,186 @@
       "email": "t@email.com",
       "password": "123",
       "id": 10
+    },
+    {
+      "username": "Dustin",
+      "email": "o ",
+      "password": "please",
+      "id": 11
+    },
+    {
+      "username": "test",
+      "email": "test",
+      "password": "test",
+      "id": 12
+    },
+    {
+      "username": "did",
+      "email": "dglk",
+      "password": "skldgfne",
+      "id": 13
+    },
+    {
+      "username": "hey",
+      "email": "weofij",
+      "password": "sfew",
+      "id": 14
+    },
+    {
+      "username": "?",
+      "email": "lksf",
+      "password": "lknsfe",
+      "id": 15
+    },
+    {
+      "username": "se",
+      "email": "klj",
+      "password": "lnj",
+      "id": 16
+    },
+    {
+      "username": "huh",
+      "email": "dsfs",
+      "password": "kllkj",
+      "id": 17
+    },
+    {
+      "username": "OMG",
+      "email": "slkfen",
+      "password": "sdlfkj",
+      "id": 18
+    },
+    {
+      "username": "yea",
+      "email": "sldfjk",
+      "password": "lskf",
+      "id": 19
+    },
+    {
+      "username": "why",
+      "email": "alsfk",
+      "password": "slfk",
+      "id": 20
+    },
+    {
+      "username": "try",
+      "email": "kjdhg",
+      "password": "slgkjhw",
+      "id": 21
+    },
+    {
+      "username": "krys",
+      "email": "sfe",
+      "password": "sefe",
+      "id": 22
+    },
+    {
+      "username": "hep",
+      "email": "lknesf",
+      "password": "kjndg",
+      "id": 23
+    },
+    {
+      "username": "yes",
+      "email": "sfe",
+      "password": "sfe",
+      "id": 24
+    },
+    {
+      "username": "weorij",
+      "email": "ewraw",
+      "password": "awer",
+      "id": 25
+    },
+    {
+      "username": "ewr",
+      "email": "ew",
+      "password": "wer",
+      "id": 26
+    },
+    {
+      "username": "ewrwe",
+      "email": "wer",
+      "password": "wer",
+      "id": 27
+    },
+    {
+      "username": "2434",
+      "email": "23423",
+      "password": "234",
+      "id": 28
+    },
+    {
+      "username": "234324",
+      "email": "32423",
+      "password": "23432",
+      "id": 29
+    },
+    {
+      "username": "23423",
+      "email": "sdf",
+      "password": "sdfs",
+      "id": 30
+    },
+    {
+      "username": "345",
+      "email": "23542",
+      "password": "34534",
+      "id": 31
+    },
+    {
+      "username": "ewuihr",
+      "email": "sdfsd",
+      "password": "sdfd",
+      "id": 32
+    },
+    {
+      "username": "erter",
+      "email": "wrtese",
+      "password": "wetrs",
+      "id": 33
+    },
+    {
+      "username": "srets",
+      "email": "ersts",
+      "password": "esrt",
+      "id": 34
+    },
+    {
+      "username": "srger",
+      "email": "serts",
+      "password": "sert",
+      "id": 35
+    },
+    {
+      "username": "sdfa",
+      "email": "aerw",
+      "password": "awer",
+      "id": 36
+    },
+    {
+      "username": "wetraw",
+      "email": "ert",
+      "password": "srte",
+      "id": 37
+    },
+    {
+      "username": "fgse",
+      "email": "drge",
+      "password": "rea",
+      "id": 38
+    },
+    {
+      "username": "ewtwer",
+      "email": "ertwert",
+      "password": "wert",
+      "id": 39
+    },
+    {
+      "username": "sdgser",
+      "email": "ertse",
+      "password": "sertes",
+      "id": 40
     }
   ],
   "friends": [],
@@ -91,6 +271,125 @@
       "message": "buddy",
       "timestamp": "2019-07-03T01:17:39.325Z",
       "id": 1
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "hey",
+      "timestamp": 1562173108273,
+      "id": 2
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "heyw",
+      "timestamp": 1562173112721,
+      "id": 3
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "89273432",
+      "timestamp": 1562173121473,
+      "id": 4
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "2982",
+      "timestamp": 1562173134391,
+      "id": 5
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "2982sdf",
+      "timestamp": 1562173138479,
+      "id": 6
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "rweter",
+      "timestamp": 1562173142415,
+      "id": 7
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "rweter345",
+      "timestamp": 1562173146087,
+      "id": 8
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "rweter345dfgr",
+      "timestamp": 1562173150235,
+      "id": 9
+    },
+    {
+      "userId": 13,
+      "username": "did",
+      "message": "did it",
+      "timestamp": 1562173155444,
+      "id": 10
+    },
+    {
+      "userId": 14,
+      "username": "hey",
+      "message": "work?",
+      "timestamp": 1562173203355,
+      "id": 11
+    },
+    {
+      "userId": 15,
+      "username": "?",
+      "message": "?",
+      "timestamp": 1562173244681,
+      "id": 12
+    },
+    {
+      "userId": 29,
+      "username": "234324",
+      "message": "yooooo",
+      "timestamp": 1562180422248,
+      "id": 13
+    },
+    {
+      "userId": 30,
+      "username": "23423",
+      "message": "HELP",
+      "timestamp": 1562180468998,
+      "id": 14
+    },
+    {
+      "userId": 31,
+      "username": "345",
+      "message": "whatds",
+      "timestamp": 1562180540596,
+      "id": 15
+    },
+    {
+      "userId": 32,
+      "username": "ewuihr",
+      "message": "123",
+      "timestamp": 1562180622850,
+      "id": 16
+    },
+    {
+      "userId": 38,
+      "username": "fgse",
+      "message": "",
+      "timestamp": 1562182371850,
+      "id": 17
+    },
+    {
+      "userId": 39,
+      "username": "ewtwer",
+      "message": "heykjab;wbr;aworbgae;rbw fwaog ow",
+      "timestamp": 1562182436664,
+      "id": 18
     }
   ]
 }
