@@ -55,7 +55,13 @@
       "id": 10
     }
   ],
-  "friends": [],
+  "friends": [
+    {
+      "id": 1,
+      "userId-1": 2,
+      "userId-2": 6
+    }
+  ],
   "articles": [
     {
       "id": 1,
