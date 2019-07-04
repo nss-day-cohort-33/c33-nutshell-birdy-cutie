@@ -11,6 +11,10 @@ const createFriendEl = (friendData) => {
     removeFriendButton.innerHTML = "Remove Friend"
     removeFriendButton.setAttribute("id", `removeFriend-${friendData.id}`)
     removeFriendButton.addEventListener("click", () => {
+        // to delete we can target current user id and friend id.
+        // then we can filter out all the friends obj until we find the obj that has the
+        // two id's. After that one Obj is located than we can delete that obj by targeting
+        // the friend obj's id in the API delete call.
         console.log(`removeFriendButton${friendData.id} clicked!`);
     })
     newFriendEl.innerHTML = `
@@ -71,6 +75,11 @@ const grabFriends = () => {
 // if it does exist the username will populate with an "Add Friend" button
 // if the button is clicked then it will create a friend request obj containing the two user's id's
 // the click event will use a factory function to create a friend request obj
+// we should probably filter that to see if they are already friends, if they are
+// we can send an alert or some message saying that they're friends
+// maybe by somehow storing friend id's within an array or something
+// we could do this if we could somehow return the array of id's from grabFriends() then
+// filter through that to see if the requested id is contained
 // that friend request obj will be added to the DB
 // a request mesage will then be sent to the person of interest
 // we can do this by storing the friend requested user's id as a certain key within the request obj
