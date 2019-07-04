@@ -66,4 +66,22 @@ const grabFriends = () => {
         })
     })
 }
+// a user will be able to search for other users
+// We can do this by filtering the user input to see if that username exists
+// if it does exist the username will populate with an "Add Friend" button
+// if the button is clicked then it will create a friend request obj containing the two user's id's
+// the click event will use a factory function to create a friend request obj
+// that friend request obj will be added to the DB
+// a request mesage will then be sent to the person of interest
+// we can do this by storing the friend requested user's id as a certain key within the request obj
+// add a button to see friend requests in nav bar
+// when the requested user is logged in they can click the button to populate requests
+// once clicked a page with all your friend requests
+//  is loaded with a preset message saying something like
+// `${username} would like to be friends`
+// That will also have "accept" and "reject" buttons
+// each button will have an eventlistener on it that will delete the request from the DB
+// if "accept" is clicked then a factory function will be used to add the new friend relationship to DB
+// if "delete" is hit then it will remove request from DB
+
 export {grabFriends}
