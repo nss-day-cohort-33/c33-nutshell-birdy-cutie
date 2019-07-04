@@ -58,8 +58,18 @@
   "friends": [
     {
       "id": 1,
-      "userId-1": 2,
-      "userId-2": 6
+      "userId_1": 2,
+      "userId_2": 6
+    },
+    {
+      "id": 2,
+      "userId_1": 8,
+      "userId_2": 6
+    },
+    {
+      "id": 3,
+      "userId_1": 10,
+      "userId_2": 7
     }
   ],
   "articles": [

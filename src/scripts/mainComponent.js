@@ -2,6 +2,7 @@ import {addEventForm} from "./events/addEventFormToDOM.js"
 import { taskFormComponent } from "./tasks/taskForm";
 import { messageBtnListener } from "./chat/chatEvent";
 import { dashToDOM } from "./mainEntryToDom.js"
+import { grabFriends } from "./friends/getFriends.js"
 
 //function to create Nav Bar component
 import { articleClick } from "./article/mainArticle.js"
@@ -55,9 +56,7 @@ function createNav () {
     taskButton.addEventListener("click", () => {
       taskFormComponent()
     })
-    friendButton.addEventListener("click", () => {
-      console.log(event)
-    })
+    friendButton.addEventListener("click", grabFriends)
     logOutButton.addEventListener("click", () => {
       logOutFunc()
     })
@@ -106,6 +105,8 @@ function createNav () {
       let taskDiv = document.createElement("div")
       taskDiv.setAttribute("id", "task-div")
       taskDiv.innerHTML = "<h4>My Tasks</h4>"
+
+
 
 
       searchMessageDiv.appendChild(searchInput)
