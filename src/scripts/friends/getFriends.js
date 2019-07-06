@@ -47,7 +47,6 @@ const grabFriends = () => {
                     }
                 }
                 // this uses the array to see if any of the id's include the current user's id
-
                 if (idArr) {
                     // will remove message of add friends
                     let newFriendList = document.querySelector("#friendsList")
