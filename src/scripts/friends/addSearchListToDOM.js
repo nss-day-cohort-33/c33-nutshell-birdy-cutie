@@ -26,6 +26,8 @@ const createSearchValueHTML = userObj => {
     addUserBtn.innerHTML = "Add Friend"
     addUserBtn.setAttribute("id", `add-${userObj.id}`)
     addUserBtn.addEventListener("click", () => {
+        // should add a conditional statement to check where the relationship already exists
+        // that way you don't have the same relationship being added multiple times
         document.getElementById(`add-${userObj.id}`).style.visibility = "hidden"
         let friendId = userObj.id
         addFriend(friendId)
