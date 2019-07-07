@@ -70,6 +70,11 @@
       "id": 3,
       "userId_1": 10,
       "userId_2": 7
+    },
+    {
+      "userId_1": 4,
+      "userId_2": 1,
+      "id": 4
     }
   ],
   "articles": [
