@@ -100,13 +100,5 @@
       "iscompleted": false
     }
   ],
-  "messages": [
-    {
-      "userId": "13",
-      "username": "yum",
-      "message": "buddy",
-      "timestamp": "2019-07-03T01:17:39.325Z",
-      "id": 1
-    }
-  ]
+  "messages": []
 }

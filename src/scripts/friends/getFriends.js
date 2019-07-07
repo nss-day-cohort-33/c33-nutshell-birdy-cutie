@@ -3,19 +3,23 @@ import { createFriendDiv } from "./addFriendsToDOM.js"
 
 
 // creates HTML that takes friendObj as an argument so it can post friends to a list in the DOM
-const createFriendEl = (friendData) => {
+const createFriendEl = (friendData, relationshipId, friendName) => {
     let newFriendList = document.querySelector("#friendsList")
     let newFriendEl = document.createElement("div")
     newFriendEl.setAttribute("id", `friendId-${friendData.id}`)
     let removeFriendButton = document.createElement("button")
     removeFriendButton.innerHTML = "Remove Friend"
-    removeFriendButton.setAttribute("id", `removeFriend-${friendData.id}`)
+    removeFriendButton.setAttribute("id", `removeFriend-${relationshipId}`)
     removeFriendButton.addEventListener("click", () => {
-        // to delete we can target current user id and friend id.
-        // then we can filter out all the friends obj until we find the obj that has the
-        // two id's. After that one Obj is located than we can delete that obj by targeting
-        // the friend obj's id in the API delete call.
-        console.log(`removeFriendButton${friendData.id} clicked!`);
+        // targets the  element that contains the friend name.
+        let elementToRemove = document.getElementById(`friendId-${friendData.id}`)
+        // takes the id of the friendship and calls the API delete method
+        API.deleteData("friends", relationshipId).then(() => {
+            alert(`${friendName} successfully removed!`)
+        })
+        // I removed the element on the click of the button, so we don't have to refresh the whole
+        // page, it just removes the element and looks as if the page was refreshed (less expensive)
+        elementToRemove.remove()
     })
     newFriendEl.innerHTML = `
         <h6>${friendData.username}</h6>
@@ -37,13 +41,17 @@ const grabFriends = () => {
         data.filter( key => {
             // This if statement allows only objects with the current user's id to be looked at
             if (key.userId_1 === id || key.userId_2 === id) {
+                // set an empty array to hold friends' id's
                 let idArr = []
+                //  set friendShipId variable to hold relationship Id
+                let friendShipId = null
                 for (let foo of Object.entries(key)) {
                     let userArr = foo[0]
                     let splitArr = userArr.split("_")
                     // if the key has userId then it will send the key value to the end of the array
                     if (splitArr[0] === "userId") {
                         idArr.push(foo[1])
+                        friendShipId = key.id
                     }
                 }
                 // this uses the array to see if any of the id's include the current user's id
@@ -60,7 +68,8 @@ const grabFriends = () => {
                             // Then it passes the returned user obj into the createFriendEl
                             // which takes an obj as an argument to create the HTML snippet for posting friends
                             // to the DOM
-                            createFriendEl(data)
+                            let name = data.username
+                            createFriendEl(data, friendShipId, name)
                             })
                         }
                     })
