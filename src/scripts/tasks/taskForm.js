@@ -3,7 +3,7 @@ import { createNav, createDashboard } from "./../mainComponent.js";
 import {API} from "./../api.js"
 import {populateTaskContainer} from "./taskToDom.js"
 
-console.log("this is task forms")
+
 
 
 function taskFormComponent () {
