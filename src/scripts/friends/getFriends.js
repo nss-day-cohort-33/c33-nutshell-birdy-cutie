@@ -13,13 +13,18 @@ const createFriendEl = (friendData, relationshipId, friendName) => {
     removeFriendButton.addEventListener("click", () => {
         // targets the  element that contains the friend name.
         let elementToRemove = document.getElementById(`friendId-${friendData.id}`)
-        // takes the id of the friendship and calls the API delete method
-        API.deleteData("friends", relationshipId).then(() => {
-            alert(`${friendName} successfully removed!`)
-        })
-        // I removed the element on the click of the button, so we don't have to refresh the whole
-        // page, it just removes the element and looks as if the page was refreshed (less expensive)
-        elementToRemove.remove()
+        if (confirm(`Are you sure you want to remove ${friendName}`)) {
+            // takes the id of the friendship and calls the API delete method
+            API.deleteData("friends", relationshipId).then(() => {
+                // added the alert within the .then() so that the element will be removed before the
+                // alert is triggered. I feel like it is more user friendly to see it go away
+                // and then be told is was successfully removed
+                alert(`${friendName} successfully removed!`)
+            })
+            // I removed the element on the click of the button, so we don't have to refresh the whole
+            // page, it just removes the element and looks as if the page was refreshed (less expensive)
+            elementToRemove.remove()
+        }
     })
     newFriendEl.innerHTML = `
         <h6>${friendData.username}</h6>
