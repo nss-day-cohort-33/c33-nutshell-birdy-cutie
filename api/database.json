@@ -53,6 +53,12 @@
       "email": "t@email.com",
       "password": "123",
       "id": 10
+    },
+    {
+      "username": "f",
+      "email": "v",
+      "password": "v",
+      "id": 11
     }
   ],
   "friends": [],
@@ -63,6 +69,14 @@
       "url": "https://www.cnbc.com/2019/07/01/here-are-the-biggest-stock-winners-from-the-us-china-trade-ceasefire.html",
       "title": "Here are the biggest stock winners from the US-China trade ceasefire",
       "synopsis": "somethings happened"
+    },
+    {
+      "userId": 11,
+      "title": "as;dlkjf",
+      "url": "ij;ozfij;oje",
+      "synopsis": "hope this works",
+      "date": "f",
+      "id": 3
     }
   ],
   "events": [
@@ -82,6 +96,20 @@
       "userId": 1,
       "task": "clean",
       "iscompleted": false
+    },
+    {
+      "userId": 11,
+      "task": "do things",
+      "completedate": "2019-07-08",
+      "iscompleted": false,
+      "id": 2
+    },
+    {
+      "userId": 11,
+      "task": "new task",
+      "completedate": "2019-07-08",
+      "iscompleted": false,
+      "id": 3
     }
   ],
   "messages": []

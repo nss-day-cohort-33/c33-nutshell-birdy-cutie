@@ -1,7 +1,7 @@
 import { API } from "../api";
 import { mainEntryToDom } from "../mainEntryToDom";
 import { createDashboard,createNav } from "../mainComponent";
-import {addArticleToDom } from "../article/addArticleToDOM"
+import { populateDom } from "../main.js"
 
 const domContainer = document.querySelector("#dashboard-container")
 
@@ -57,7 +57,8 @@ const loginValidation = (userData, username, password) => {
             sessionStorage.setItem("userId", user.id)
             let loginID = sessionStorage.getItem("userId")
             mainEntryToDom(createNav(), createDashboard())
-            addArticleToDom()
+            populateDom()
+
 
         }
     });
@@ -101,6 +102,7 @@ function registerFormComponent() {
                 API.getData("users").then( newData => storage(newData, createdUser))
                 domContainer.innerHTML = ""
                 mainEntryToDom(createNav(), createDashboard())
+                populateDom()
             })
         }
         else{
