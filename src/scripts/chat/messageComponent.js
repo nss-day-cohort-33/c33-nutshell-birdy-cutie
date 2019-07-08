@@ -1,4 +1,7 @@
-import { checkUserIdChatListener, editMessageButtonListener } from "./chatEvents.js";
+import {
+  checkUserIdChatListener,
+  editMessageButtonListener
+} from "./chatEvents.js";
 
 // only let double click for edit button once?
 function messageComponent(obj, userId) {
@@ -17,6 +20,9 @@ function messageComponent(obj, userId) {
   editMessageButton.textContent = "Edit";
   messageHolderDiv.addEventListener("dblclick", event => {
     checkUserIdChatListener(obj.userId, userId, messageDiv, editMessageButton);
+    messageHolderDiv.addEventListener("click", event => {
+      editMessageButton.style.display = "none";
+    });
     editMessageButton.addEventListener("click", event => {
       editMessageButtonListener(event, messageHolderDiv, messageDiv);
     });
