@@ -1,6 +1,5 @@
 import {createNav, createDashboard} from "./mainComponent.js"
 import {mainEntryToDom, dashToDOM} from "./mainEntryToDom.js"
-import {API} from "./api.js"
 import "./tasks/eventlisteners.js"
 import {addArticleToDom } from "./article/addArticleToDOM.js"
 import {populateTaskContainer } from "./tasks/taskToDom.js"
@@ -22,4 +21,4 @@ function populateDom(){
     addEventsToDOM()
 }
 
-export {populateDom }
+export {populateDom}

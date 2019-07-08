@@ -83,14 +83,12 @@ function addTaskToDb () {
 function editTaskNameInput (event) {
  let id = event.target.id.split("-")[1]
  let taskNameChange = document.querySelector(`#taskName-${id}`)
- taskNameChange.innerHTML = `<input type='text' value ="${event.target.innerHTML}" id =editTaskInput-${id} >`
-let saveEditedTaskBtn = document.createElement("button")
-saveEditedTaskBtn.setAttribute("class", "saveEditedTaskBtn")
-saveEditedTaskBtn.setAttribute("id", `saveEtdTskBtn-${id}`)
-saveEditedTaskBtn.textContent = "Save Task"
-
-taskNameChange.appendChild(saveEditedTaskBtn)
-saveEditedTaskEl(id)
+ let parentDiv = document.querySelector(`#taskDiv${id}`)
+ let inputField = document.createElement("input")
+ inputField.setAttribute("type", "text")
+ inputField.setAttribute("value", `${event.target.innerHTML}`)
+ inputField.setAttribute("id", `editTaskInput-${id}` )
+parentDiv.replaceChild (inputField, taskNameChange)
 }
 
-export {taskFormComponent, editTaskNameInput}
+export {taskFormComponent, editTaskNameInput, createNewTask}
