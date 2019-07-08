@@ -31,7 +31,7 @@ function saveEditedTaskEl (id) {
       editedTaskObj.id = id
       API.editData("tasks", editedTaskObj)
       .then(API.getData("tasks"))
-      .then(populateDom())
+      .then(populateDom)
     }
 
   })
