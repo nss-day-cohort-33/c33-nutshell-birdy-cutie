@@ -19,11 +19,10 @@ function messageComponent(obj, userId) {
   let editMessageButton = document.createElement("button");
   editMessageButton.setAttribute("id", `edit-message-btn--${obj.id}`);
   editMessageButton.textContent = "Edit";
-  // editMessageButton.style.display = "display"
   messageHolderDiv.addEventListener("dblclick", event => {
     checkUserIdChat(obj.userId, userId, messageDiv, editMessageButton);
     editMessageButton.addEventListener("click", event => {
-      editMessageButtonListener(event, hiddenInput);
+      editMessageButtonListener(event, hiddenInput, messageHolderDiv, messageDiv);
     });
     messageHolderDiv.addEventListener("click", event => {
       let editButtonClick = document.querySelector(
