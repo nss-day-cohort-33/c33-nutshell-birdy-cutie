@@ -19,16 +19,22 @@ function welcomeComponent() {
     registerButton.textContent = "Click Here To Register"
     registerButton.addEventListener("click", event => {
         document.getElementById("reg-btn").style.visibility = "hidden"
-        document.getElementById("lgn-btn").style.visibility = "hidden"
+        if (document.querySelector("#login-form")) {
+            document.getElementById("lgn-btn").style.visibility = "visible"
+            document.querySelector("#login-form").remove()
+        }
         domContainer.appendChild(registerFormComponent())
     })
     let loginButton = document.createElement("button")
     loginButton.setAttribute("id", "lgn-btn")
     loginButton.textContent = "Log In"
     loginButton.addEventListener("click", () => {
-        document.getElementById("reg-btn").style.visibility = "hidden"
         document.getElementById("lgn-btn").style.visibility = "hidden"
         document.getElementById("registerHeader").style.visibility = "hidden"
+        if (document.querySelector("#register-form")) {
+            document.getElementById("reg-btn").style.visibility = "visible"
+            document.querySelector("#register-form").remove()
+        }
         domContainer.appendChild(loginFormComponent())
     })
     welcomeDiv.appendChild(welcomeHeader)
@@ -64,8 +70,40 @@ const loginValidation = (userData, username, password) => {
     });
     return wrongUsers
 }
+
+const registerValidation = (newUser, newEmail, newPassword) => {
+    let usernameStr = newUser.toLowerCase()
+    let emailStr = newEmail.toLowerCase()
+    console.log("usernameStr: ", usernameStr);
+    console.log("emailStr: ", emailStr);
+    let TFstr = true
+    API.getData("users").then(data => {
+        data.forEach ( userData => {
+            let userNameLC = userData.username
+            let emailLC = userData.email
+            if (userNameLC.toLowerCase() === usernameStr || emailLC.toLowerCase() === emailStr) {
+                TFstr = false
+            }
+        });
+        if (TFstr) {
+            let createdUser = createNewUser(newUser, newEmail, newPassword)
+            API.addData("users", createdUser)
+            .then(() => {
+                API.getData("users").then( newData => storage(newData, createdUser))
+                domContainer.innerHTML = ""
+                mainEntryToDom(createNav(), createDashboard())
+                populateDom()
+
+            })
+        } else {
+            alert("Username/email is already taken!")
+        }
+    })
+}
+
 function registerFormComponent() {
     let registerDiv = document.createElement("form")
+    registerDiv.setAttribute("id", "register-form")
     let userName = document.createElement("input")
     userName.setAttribute("type", "text")
     userName.setAttribute("name", "user-name")
@@ -91,19 +129,14 @@ function registerFormComponent() {
     regSubmitBtn.setAttribute("id", "reg-submit-btn")
     regSubmitBtn.textContent = "Submit"
     regSubmitBtn.addEventListener("click", event => {
+
         event.preventDefault()
         let newUser = userName.value
         let newEmail = email.value
         let newPassword = password.value
         if (newUser && newEmail && newPassword){
-            let createdUser = createNewUser(newUser, newEmail, newPassword)
-            API.addData("users", createdUser)
-            .then(data => {
-                API.getData("users").then( newData => storage(newData, createdUser))
-                domContainer.innerHTML = ""
-                mainEntryToDom(createNav(), createDashboard())
-                populateDom()
-            })
+            registerValidation(newUser, newEmail, newPassword)
+
         }
         else{
             alert("Please fill out all fields!")
@@ -125,6 +158,7 @@ function registerFormComponent() {
 
 const loginFormComponent = () => {
     let loginForm = document.createElement("form")
+    loginForm.setAttribute("id", "login-form")
     let loginFieldset = document.createElement("fieldset")
     let loginLegend = document.createElement("legend")
     loginLegend.setAttribute("id", "lgn-legend")
