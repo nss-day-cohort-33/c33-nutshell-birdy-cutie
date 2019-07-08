@@ -35,7 +35,7 @@ const createFriendEl = (friendData, relationshipId, friendName) => {
 // filters through friend DB, if they have friend connections, then it will add them to the DOM
 // if not it will give a "add friends!" message
 const grabFriends = () => {
-    const dashContainer = document.querySelector("#dashboard-container")
+    const dashContainer = document.querySelector("#data-container")
     dashContainer.innerHTML = ""
     createFriendDiv()
     let id = +sessionStorage.getItem("userId")
