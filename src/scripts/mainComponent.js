@@ -1,6 +1,6 @@
 import {addEventForm} from "./events/addEventFormToDOM.js"
 import { taskFormComponent } from "./tasks/taskForm";
-import { messageBtnListener } from "./chat/chatEvent";
+import { messageBtnListener } from "./chat/entriesToChat";
 import { dashToDOM } from "./mainEntryToDom.js"
 import { API } from "./api.js"
 
@@ -98,6 +98,8 @@ function createNav () {
       let chatDiv = document.createElement("div")
       chatDiv.setAttribute("id", "chat-div")
       chatDiv.innerHTML = "<h4>Chat</h4>"
+      let chatMessageDiv =document.createElement("div")
+      chatMessageDiv.setAttribute("id", "chat-message-div")
       let articleDiv = document.createElement("div")
       articleDiv.setAttribute("id", "article-div")
       articleDiv.innerHTML = "<h4>Articles</h4>"
@@ -113,6 +115,7 @@ function createNav () {
       searchMessageDiv.appendChild(searchBtn)
       searchMessageDiv.appendChild(messageText)
       searchMessageDiv.appendChild(postMessageBtn)
+      chatDiv.appendChild(chatMessageDiv)
       dashColumnsSection.appendChild(chatDiv)
       dashColumnsSection.appendChild(articleDiv)
       dashColumnsSection.appendChild(eventDiv)
