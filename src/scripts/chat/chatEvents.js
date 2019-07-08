@@ -1,4 +1,25 @@
+import {API} from "../api";
+import { buildMessageObj, messageInputLength } from "./chatHelpers.js";
+import {entriesToChat} from "./entriesToChat.js"
 
+function messageBtnListener(){
+  let userId = +sessionStorage.getItem("userId")
+  let username = ""
+  let message = document.querySelector("#message-input")
+  let timeStamp = Date.now()
+  let messageLength = messageInputLength(message.value)
+  if (messageLength === true ){
+      API.getData("users", userId)
+      .then(data => {
+          username = data.username
+          API.addData("messages", buildMessageObj(userId, username, message.value, timeStamp))
+          .then (data => {
+              message.value = ""
+              entriesToChat()
+          })
+      })
+  }
+}
 
 function checkUserIdChat (userIdcheck, userId, messageDiv, editMessageButton){
     if (userIdcheck === userId) {
@@ -23,4 +44,4 @@ function editMessageButtonListener (event, hiddenInput){
 
   }))
 }
-export {checkUserIdChat, editMessageButtonListener}
+export {messageBtnListener, checkUserIdChat, editMessageButtonListener}
