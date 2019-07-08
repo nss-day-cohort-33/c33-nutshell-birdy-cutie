@@ -27,11 +27,10 @@ const editBtnListener = ( btn) => {
 }
 const saveBtnListener = ( btn) => {
     btn.addEventListener("click", () => {
-        let event_nameKey = document.querySelector("#event-name-input")
-        let dateKey = document.querySelector("#event-date-input")
-        let timeKey = document.querySelector("#event-time-input")
-        let locationKey = document.querySelector("#event-location-input")
-        const domContainer = document.querySelector("#dashboard-container")
+        let event_nameKey = document.querySelector("#event-name-input").value
+        let dateKey = document.querySelector("#event-date-input").value
+        let timeKey = document.querySelector("#event-time-input").value
+        let locationKey = document.querySelector("#event-location-input").value
         if (event_nameKey && dateKey && timeKey && locationKey) {
             addEventToDB(event_nameKey, dateKey, timeKey, locationKey)
         }
