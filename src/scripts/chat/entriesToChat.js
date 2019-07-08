@@ -40,4 +40,4 @@ function entriesToChat (){
 
 
 
-export {messageBtnListener}
+export {messageBtnListener, entriesToChat}
