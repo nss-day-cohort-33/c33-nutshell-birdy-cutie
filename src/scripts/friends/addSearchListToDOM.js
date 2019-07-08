@@ -7,16 +7,18 @@ const searchForPeople = (searchValue) => {
     dashContainer.innerHTML = ""
     addSearchValueDivToDOM()
     API.getData("users").then( data => {
+        let searchListContainer = document.getElementById("searchList")
         let searchInputValue = searchValue.toLowerCase()
         data.forEach( listOfPeople => {
             let searchUsername = listOfPeople.username.toLowerCase()
             let searchEmail = listOfPeople.email.toLowerCase()
             if (searchUsername === searchInputValue || searchEmail === searchInputValue) {
-                let searchListContainer = document.getElementById("searchList")
-                searchListContainer.innerHTML = ""
                 createSearchValueHTML(listOfPeople)
             }
         });
+        if (searchListContainer.innerHTML === "") {
+            searchListContainer.innerHTML = "<p>User not found!</p>"
+        }
     })
 }
 
@@ -49,7 +51,6 @@ const addSearchValueDivToDOM = () => {
     searchValueDiv.setAttribute("id", "search-div")
     searchValueDiv.innerHTML = "<h4>People</h4>"
     let listOfSearchValues = document.createElement("article")
-    listOfSearchValues.innerHTML = "User not found!"
     listOfSearchValues.setAttribute("id", "searchList")
     searchValueDiv.appendChild(listOfSearchValues)
     dashContainer.appendChild(searchValueDiv)
