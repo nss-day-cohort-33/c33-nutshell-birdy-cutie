@@ -2,13 +2,15 @@ import {mainEntryToDom} from "./../mainEntryToDom"
 import { createNav, createDashboard } from "./../mainComponent.js";
 import {API} from "./../api.js"
 import {populateTaskContainer} from "./taskToDom.js"
+import { saveEditedTaskEl } from "./eventlisteners";
+import { populateDom } from "../main";
 
-console.log("this is task forms")
+
 
 
 function taskFormComponent () {
-  const domContainer = document.querySelector("#dashboard-container")
-  domContainer.innerHTML = ""
+  const dashContainer = document.querySelector("#data-container")
+  dashContainer.innerHTML = ""
   let taskForm = document.createElement("form")
   taskForm.setAttribute("id", "new-task-form")
   let newTaskNameInput = document.createElement("input")
@@ -40,7 +42,7 @@ taskDateContainer.appendChild(taskCompleteDateInput)
 taskForm.appendChild(newTaskNameContainer)
 taskForm.appendChild(taskDateContainer)
 taskForm.appendChild(taskSubmitBtn)
-domContainer.appendChild(taskForm)
+dashContainer.appendChild(taskForm)
 }
 
 //factory function creating new task object
@@ -61,19 +63,34 @@ function addTaskToDb () {
   if (newTaskValue && newTaskDateValue){
     let newTaskObj = createNewTask(newTaskValue, newTaskDateValue)
     API.addData("tasks", newTaskObj)
-    .then( mainEntryToDom(createNav(), createDashboard()))
-    API.getData("tasks")
-    .then( () => {
-      //removing new task form from DOM and populating tasks
       const domContainer = document.querySelector("#dashboard-container")
-      domContainer.removeChild(domContainer.childNodes[0])
-      const taskBox = document.querySelector("#task-div")
+      domContainer.innerHTML = ""
+      mainEntryToDom( createNav(), createDashboard())
+    const taskBox = document.querySelector("#task-div")
+    API.getData("tasks")
+    //removing new task form from DOM and populating tasks
+    .then( () => {
       taskBox.innerHTML = ""
-      populateTaskContainer()
+      populateDom()
+
   })
 } else {
   alert ("Please fill out all fields!")
 }
 }
 
-export {taskFormComponent}
+//edit task component that pulls up text input with task name populated to edit
+function editTaskNameInput (event) {
+ let id = event.target.id.split("-")[1]
+ let taskNameChange = document.querySelector(`#taskName-${id}`)
+ taskNameChange.innerHTML = `<input type='text' value ="${event.target.innerHTML}" id =editTaskInput-${id} >`
+let saveEditedTaskBtn = document.createElement("button")
+saveEditedTaskBtn.setAttribute("class", "saveEditedTaskBtn")
+saveEditedTaskBtn.setAttribute("id", `saveEtdTskBtn-${id}`)
+saveEditedTaskBtn.textContent = "Save Task"
+
+taskNameChange.appendChild(saveEditedTaskBtn)
+saveEditedTaskEl(id)
+}
+
+export {taskFormComponent, editTaskNameInput}
