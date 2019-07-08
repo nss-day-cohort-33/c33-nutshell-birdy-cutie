@@ -139,39 +139,12 @@
     },
     {
       "userId": 7,
-      "event_name": "event",
-      "date": "2019-12-31",
-      "time": "12:00",
-      "location": "nss",
-      "timestamp": "2019-7-8 11:25:22.846 +03:00",
-      "id": 2
-    },
-    {
-      "userId": 7,
-      "event_name": "event",
-      "date": "2019-01-01",
-      "time": "01:00",
-      "location": "go",
-      "timestamp": "2019-7-8 11:33:34.234 +03:00",
-      "id": 3
-    },
-    {
-      "userId": 7,
-      "event_name": "new",
-      "date": "2019-01-01",
-      "time": "01:00",
-      "location": "nss",
-      "timestamp": "2019-7-8 11:35:10.37 +03:00",
-      "id": 4
-    },
-    {
-      "userId": 12,
-      "event_name": "new evnt",
-      "date": "2019-01-01",
-      "time": "01:00",
-      "location": "12p",
-      "timestamp": "2019-7-8 11:46:56.47 +03:00",
-      "id": 5
+      "event_name": "Add a New Event",
+      "date": "2019-07-11",
+      "time": "14:30",
+      "location": "NSS Hackery",
+      "timestamp": "2019-7-8 13:30:21.33 +03:00",
+      "id": 7
     }
   ],
   "tasks": [
