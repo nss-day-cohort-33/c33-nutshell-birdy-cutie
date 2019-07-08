@@ -7,8 +7,11 @@ const searchForPeople = (searchValue) => {
     dashContainer.innerHTML = ""
     addSearchValueDivToDOM()
     API.getData("users").then( data => {
+        let searchInputValue = searchValue.toLowerCase()
         data.forEach( listOfPeople => {
-            if (listOfPeople.username === searchValue || listOfPeople.email === searchValue) {
+            let searchUsername = listOfPeople.username.toLowerCase()
+            let searchEmail = listOfPeople.email.toLowerCase()
+            if (searchUsername === searchInputValue || searchEmail === searchInputValue) {
                 let searchListContainer = document.getElementById("searchList")
                 searchListContainer.innerHTML = ""
                 createSearchValueHTML(listOfPeople)
