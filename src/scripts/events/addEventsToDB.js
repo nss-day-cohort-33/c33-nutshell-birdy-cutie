@@ -1,6 +1,4 @@
-import {clickDate, createTimeStamp} from "./getTimeStamp.js"
-import {addEventsToDOM}  from "./addEventsToDOM.js"
-import {createEventObj, filterUserEvents} from "./helpers.js"
+import {createEventObj} from "./helpers.js"
 import {mainEntryToDom} from "../mainEntryToDom.js"
 import {createNav, createDashboard} from "../mainComponent.js"
 import {API} from "../api.js"
@@ -12,7 +10,7 @@ import { populateDom } from "../main.js";
 
 const addEventToDB = (event_nameKey, dateKey, timeKey, locationKey) => {
     let domContainer = document.querySelector("#dashboard-container")
-    let newTimeStamp = createTimeStamp(clickDate())
+    let newTimeStamp = Date.now()
     let currentUserId = +sessionStorage.getItem("userId")
     let userIdKey = currentUserId
     let event_nameValue = event_nameKey

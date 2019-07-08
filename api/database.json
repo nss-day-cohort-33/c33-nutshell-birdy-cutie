@@ -121,16 +121,16 @@
       "date": "2019-07-01",
       "location": "nashville",
       "time": "16:00",
-      "timestamp": "2019-6-2 14:47:14.571 +03:00"
+      "timestamp": 562600594632
     },
     {
       "userId": 7,
-      "event_name": "Add a New Event",
+      "event_name": "New timeStamp",
       "date": "2019-07-11",
-      "time": "14:30",
-      "location": "NSS Hackery 1",
-      "timestamp": "2019-7-8 14:0:6.279 +03:00",
-      "id": 7
+      "time": "14:41",
+      "location": "Hackery",
+      "timestamp": 1562614885383,
+      "id": 2
     }
   ],
   "tasks": [
