@@ -3,6 +3,7 @@ import { createNav, createDashboard } from "./../mainComponent.js";
 import {API} from "./../api.js"
 import {populateTaskContainer} from "./taskToDom.js"
 import { saveEditedTaskEl } from "./eventlisteners";
+import { populateDom } from "../main";
 
 
 
@@ -70,7 +71,8 @@ function addTaskToDb () {
     //removing new task form from DOM and populating tasks
     .then( () => {
       taskBox.innerHTML = ""
-      populateTaskContainer()
+      populateDom()
+
   })
 } else {
   alert ("Please fill out all fields!")
