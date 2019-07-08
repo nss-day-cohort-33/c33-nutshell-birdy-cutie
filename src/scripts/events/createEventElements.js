@@ -33,5 +33,14 @@ const eventFormElement = () => {
     return eventFormSection
 }
 
+// created a function that adds userEvents to the DOM also created delete and edi buttons IF we get there
+//being called in addEventToDB()
 
-export {eventsDOMElement, eventFormElement}
+const addEventElementToDOM = (dataObj) => {
+    let eventLog = document.querySelector("#event-div")
+    let newEventHTML = eventsDOMElement(dataObj)
+    eventLog.appendChild(newEventHTML)
+    return eventLog
+}
+
+export {eventFormElement, addEventElementToDOM}

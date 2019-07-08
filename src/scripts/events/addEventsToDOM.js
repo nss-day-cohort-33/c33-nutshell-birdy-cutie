@@ -1,14 +1,14 @@
-import {eventsDOMElement} from "./createEventElements.js"
+import {addEventElementToDOM} from "./createEventElements.js"
+import {filterUserEvents} from "./helpers.js"
+import {API} from "../api.js"
 
-
-// created a function that adds userEvents to the DOM also created delete and edi buttons IF we get there
-//being called in addEventToDB()
-
-const addEventsToDOM = (dataObj) => {
-    let eventLog = document.querySelector("#event-div")
-    let newEventHTML = eventsDOMElement(dataObj)
-    eventLog.appendChild(newEventHTML)
-    return eventLog
+const addEventsToDOM = () => {
+    let userIdKey = +sessionStorage.getItem("userId")
+    API.getData("events").then( data => {
+        let usrEvent =  filterUserEvents(data, userIdKey)
+        usrEvent.forEach( dataForDOM => {
+            addEventElementToDOM(dataForDOM)
+        });
+    })
 }
-
 export {addEventsToDOM}
