@@ -1,5 +1,5 @@
 import { API } from "../api";
-
+import {editTaskEventListener} from "./eventlisteners.js"
 //get tasks and filter tasks based on session stored userId
 function populateTaskContainer () {
   let taskBox = document.querySelector("#task-div")
@@ -11,23 +11,17 @@ function populateTaskContainer () {
       let taskCode =
       `
       <div>
-      <h3 class="edit-task">${task.task}</h3>
+      <h3 class="edit-task" id =taskName-${task.id}>${task.task}</h3>
       <p>Due by:${task.completedate}</p>
-      <input type="checkbox" id = "${task.id}">
+      <input type="checkbox" id = "isComplete-${task.id}">
       <label>Task Complete</label><hr>
       `
       taskBox.innerHTML += taskCode
     })
-
-function editTaskEventListener ()
-    let tasksToEdit = document.querySelectorAll(".edit-task")
-    tasksToEdit.forEach(task => {
-      task.addEventListener("click", event => {
-        console.log(event)
-      })
-    })
+    editTaskEventListener()
   })
 }
+
 
 
 
