@@ -5,10 +5,10 @@ function messageComponent(obj, userId) {
   let messageDiv = document.createElement("div");
   messageDiv.setAttribute("id", "message-div");
   let usernameDiv = document.createElement("div");
-  usernameDiv.setAttribute("id", "username-div");
+  usernameDiv.setAttribute("id", `username-div--${obj.id}`);
   usernameDiv.textContent = `${obj.username}:`;
   let messageHolderDiv = document.createElement("div");
-  messageHolderDiv.setAttribute("id", "messager-holder-div");
+  messageHolderDiv.setAttribute("id", `messager-holder-div--${obj.id}`);
   messageHolderDiv.textContent = `${obj.message}`;
   let hiddenInput = document.createElement("input");
   hiddenInput.setAttribute("type", "hidden");
