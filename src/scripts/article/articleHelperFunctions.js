@@ -46,7 +46,14 @@ function createSubmitArticleBtn(func) {
     let url = document.getElementById("article-url").value;
     let synopsis = document.getElementById("article-synopsis").value;
     let date = document.getElementById("article-date").value;
-    let newArticle = createArticle(userId, title, url, synopsis, date);
+    let newArticle = {}
+    if(document.querySelector("#article-id")){
+      let articleId = document.querySelector("#article-id").value
+      newArticle = createArticle(userId, title, url, synopsis, date, articleId)
+    }
+    else{
+      newArticle = createArticle(userId, title, url, synopsis, date, "");
+    }
     console.log(newArticle);
     func("articles", newArticle).then(data => {
       domContainer.innerHTML = "";
@@ -57,13 +64,14 @@ function createSubmitArticleBtn(func) {
   return SubmitBtn;
 }
 
-function createArticle(userId, title, url, synopsis, date) {
+function createArticle(userId, title, url, synopsis, date, id) {
   return {
     userId,
     title,
     url,
     synopsis,
-    date
+    date,
+    id
   };
 }
 
