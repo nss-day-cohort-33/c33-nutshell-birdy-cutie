@@ -13,7 +13,7 @@ const createFriendEl = (friendData, relationshipId, friendName) => {
     removeFriendButton.addEventListener("click", () => {
         // targets the  element that contains the friend name.
         let elementToRemove = document.getElementById(`friendId-${friendData.id}`)
-        if (confirm(`Are you sure you want to remove ${friendName}`)) {
+        if (confirm(`Are you sure you want to remove ${friendName} as a friend?`)) {
             // takes the id of the friendship and calls the API delete method
             API.deleteData("friends", relationshipId).then(() => {
                 // added the alert within the .then() so that the element will be removed before the
