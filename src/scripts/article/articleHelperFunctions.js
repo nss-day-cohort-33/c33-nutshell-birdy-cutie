@@ -1,11 +1,14 @@
-import { API } from "../api.js"
-import {mainEntryToDom} from "../mainEntryToDom.js"
-import { createDashboard, createNav } from "../mainComponent.js"
+import { API } from "../api.js";
+import { mainEntryToDom } from "../mainEntryToDom.js";
+import { createDashboard, createNav } from "../mainComponent.js";
+import { addArticleToDom } from "./addArticleToDOM.js"
+import { populateDom } from "../main.js"
+import { editBtnClicked } from "./clickEvents.js"
 
-const domContainer = document.querySelector("#dashboard-container")
+const domContainer = document.querySelector("#dashboard-container");
 
-function createArticleForm(){
-    return `<form id="article-form">
+function createArticleForm() {
+  return `<form>
     <section>
       <fieldset>
         <label>title</label>
@@ -30,40 +33,77 @@ function createArticleForm(){
           <input type="text" name="article-date" id="article-date" />
         </fieldset>
       </section>
-  </form>`
+  </form>`;
 }
 
-function createSubmitArticleBtn(){
-    let SubmitBtn = document.createElement("button")
-    SubmitBtn.setAttribute("id", "article-submit-btn")
-    SubmitBtn.textContent = "Submit"
-    SubmitBtn.addEventListener("click", event => {
-        let userId = +sessionStorage.getItem("userId")
-        let title = document.getElementById("article-title").value
-        let url = document.getElementById("article-url").value
-        let synopsis = document.getElementById("article-synopsis").value
-        let date = document.getElementById("article-date").value
-        let newArticle = createArticle(userId,title, url, synopsis, date)
-        console.log(newArticle)
-        API.addData("articles",newArticle)
-        .then( data => {
-            domContainer.innerHTML = ""
-                mainEntryToDom(createNav(), createDashboard())
-        })
+function createSubmitArticleBtn(func) {
+  let SubmitBtn = document.createElement("button");
+  SubmitBtn.setAttribute("id", "article-submit-btn");
+  SubmitBtn.textContent = "Submit";
+  SubmitBtn.addEventListener("click", event => {
+    let userId = +sessionStorage.getItem("userId");
+    let title = document.getElementById("article-title").value;
+    let url = document.getElementById("article-url").value;
+    let synopsis = document.getElementById("article-synopsis").value;
+    let date = document.getElementById("article-date").value;
+    let newArticle = createArticle(userId, title, url, synopsis, date);
+    console.log(newArticle);
+    func("articles", newArticle).then(data => {
+      domContainer.innerHTML = "";
+      mainEntryToDom(createNav(), createDashboard());
+      populateDom()
+    });
+  });
+  return SubmitBtn;
+}
+
+function createArticle(userId, title, url, synopsis, date) {
+  return {
+    userId,
+    title,
+    url,
+    synopsis,
+    date
+  };
+}
+
+function articleToHTML(data) {
+  return `
+    <h4>${data.title}</h4>
+    <p>${data.synopsis}</p>
+    <a href= ${data.url} target="_blank">link</a>
+  `;
+}
+
+function createArticleCard(data){
+  let articleCard = document.createElement("section")
+  articleCard.setAttribute("id", data.id)
+  articleCard.innerHTML = articleToHTML(data)
+  let editBtn = document.createElement("button")
+  editBtn.setAttribute("id", `edit-${data.id}`)
+  let deleteBtn = document.createElement("button")
+  deleteBtn.setAttribute("id", `delete-${data.id}`)
+  editBtn.textContent = "edit"
+  deleteBtn.textContent = "delete"
 
 
+  editBtn.addEventListener("click", event => {
+    console.log("click")
+    editBtnClicked(data)
+  })
+
+  deleteBtn.addEventListener("click", event => {
+    console.log("click")
+    API.deleteData("articles", data.id).then(data => {
+      API.getData("articles").then(addArticleToDom)
     })
-    return SubmitBtn
+  })
+  articleCard.appendChild(editBtn)
+  articleCard.appendChild(deleteBtn)
+
+  return articleCard
+
 }
 
-function createArticle(userId,title,url,synopsis,date){
-    return {
-        userId,
-        title,
-        url,
-        synopsis,
-        date
-    }
-}
 
-export { createArticleForm, createSubmitArticleBtn }
+export { createArticleForm, createSubmitArticleBtn, createArticleCard };

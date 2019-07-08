@@ -2,6 +2,7 @@ import {addEventForm} from "./events/addEventFormToDOM.js"
 import { taskFormComponent } from "./tasks/taskForm";
 import { messageBtnListener } from "./chat/chatEvent";
 import { dashToDOM } from "./mainEntryToDom.js"
+import { API } from "./api.js"
 
 //function to create Nav Bar component
 import { articleClick } from "./article/mainArticle.js"
@@ -47,7 +48,7 @@ function createNav () {
       console.log(event)
     })
     articleButton.addEventListener("click", () => {
-      articleClick()
+      articleClick(API.addData)
     })
     eventButton.addEventListener("click", () => {
       addEventForm()

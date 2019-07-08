@@ -1,6 +1,7 @@
 import { API } from "../api";
 import { mainEntryToDom } from "../mainEntryToDom";
 import { createDashboard,createNav } from "../mainComponent";
+import {addArticleToDom } from "../article/addArticleToDOM"
 
 const domContainer = document.querySelector("#dashboard-container")
 
@@ -56,6 +57,8 @@ const loginValidation = (userData, username, password) => {
             sessionStorage.setItem("userId", user.id)
             let loginID = sessionStorage.getItem("userId")
             mainEntryToDom(createNav(), createDashboard())
+            addArticleToDom()
+
         }
     });
     return wrongUsers
