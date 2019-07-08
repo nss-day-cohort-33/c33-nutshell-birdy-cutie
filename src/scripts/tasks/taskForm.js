@@ -2,7 +2,7 @@ import {mainEntryToDom} from "./../mainEntryToDom"
 import { createNav, createDashboard } from "./../mainComponent.js";
 import {API} from "./../api.js"
 import {populateTaskContainer} from "./taskToDom.js"
-import { saveEditedTaskEventListener } from "./eventlisteners";
+import { saveEditedTaskEl } from "./eventlisteners";
 
 
 
@@ -88,7 +88,7 @@ saveEditedTaskBtn.setAttribute("id", `saveEtdTskBtn-${id}`)
 saveEditedTaskBtn.textContent = "Save Task"
 
 taskNameChange.appendChild(saveEditedTaskBtn)
-saveEditedTaskEventListener(id)
+saveEditedTaskEl(id)
 }
 
 export {taskFormComponent, editTaskNameInput}
