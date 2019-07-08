@@ -1,5 +1,5 @@
-import {createEventFormHTML, createEventDOMHTML} from "./createEventHTML.js"
-import {delBtnListener, editBtnListener, saveBtnListener} from "./eventListeners"
+import {createEventFormHTML, createEventDOMHTML, createEventEditHTML} from "./createEventHTML.js"
+import {delBtnListener, editBtnListener, saveBtnListener, saveEditBtnListener} from "./eventListeners"
 // create funtion that makes HTML snippet to add events to DOM
 // being called in addEventsToDOM()
 
@@ -7,8 +7,8 @@ const eventsDOMElement = ( eventData) => {
     let newHTML = document.createElement("article")
     let editEventBtn = document.createElement("button")
     let delEventBtn = document.createElement("button")
-    editEventBtn.setAttribute("id", `editBtn-${eventData.id}`)
-    delEventBtn.setAttribute("id", `delBtn-${eventData.id}`)
+    editEventBtn.setAttribute("id", `edit-${eventData.id}`)
+    delEventBtn.setAttribute("id", `del-${eventData.id}`)
     editEventBtn.innerHTML = "Edit Event"
     delEventBtn.innerHTML = "Delete Event"
     delBtnListener(delEventBtn)
@@ -33,6 +33,22 @@ const eventFormElement = () => {
     return eventFormSection
 }
 
+// This makes the edit form and takes the arguments of the event id and the previously
+// inputed values
+
+const eventEditElement = (name, date, time, location, eventId) => {
+    let eventEditSection = document.createElement("section")
+    let savEditBtn = document.createElement("button")
+    let id = +sessionStorage.getItem("userId")
+    eventEditSection.setAttribute("id", "event-edit")
+    eventEditSection.innerHTML = createEventEditHTML(id, name, date, time, location)
+    savEditBtn.setAttribute("id", `${eventId}`)
+    savEditBtn.innerHTML = "Update Event"
+    saveEditBtnListener(savEditBtn)
+    eventEditSection.appendChild(savEditBtn)
+    return eventEditSection
+}
+
 // created a function that adds userEvents to the DOM also created delete and edi buttons IF we get there
 //being called in addEventToDB()
 
@@ -43,4 +59,5 @@ const addEventElementToDOM = (dataObj) => {
     return eventLog
 }
 
-export {eventFormElement, addEventElementToDOM}
+
+export {eventFormElement, addEventElementToDOM, eventEditElement}
