@@ -5,6 +5,7 @@ import "./tasks/eventlisteners.js"
 import {addArticleToDom } from "./article/addArticleToDOM.js"
 import {populateTaskContainer } from "./tasks/taskToDom.js"
 import { entriesToChat } from "./chat/entriesToChat.js"
+import {addEventsToDOM}  from "./events/addEventsToDOM.js"
 if (sessionStorage.getItem("userId")) {
     mainEntryToDom(createNav(), createDashboard())
     populateDom()
@@ -18,6 +19,7 @@ function populateDom(){
     addArticleToDom()
     populateTaskContainer()
     entriesToChat()
+    addEventsToDOM()
 }
 
 export {populateDom }
