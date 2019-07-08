@@ -30,7 +30,7 @@ function saveEditedTaskEl (id) {
       let editedTaskObj = createNewTask(taskNameValue, justTaskDate)
       editedTaskObj.id = id
       API.editData("tasks", editedTaskObj)
-      API.getData("tasks")
+      .then(API.getData("tasks"))
       .then(populateDom())
     }
 
