@@ -3,6 +3,8 @@ import { taskFormComponent } from "./tasks/taskForm";
 import { messageBtnListener } from "./chat/entriesToChat";
 import { dashToDOM } from "./mainEntryToDom.js"
 import { API } from "./api.js"
+import { grabFriends } from "./friends/getFriends.js"
+import {searchForPeople} from "./friends/addSearchListToDOM.js"
 
 //function to create Nav Bar component
 import { articleClick } from "./article/mainArticle.js"
@@ -56,9 +58,7 @@ function createNav () {
     taskButton.addEventListener("click", () => {
       taskFormComponent()
     })
-    friendButton.addEventListener("click", () => {
-      console.log(event)
-    })
+    friendButton.addEventListener("click", grabFriends)
     logOutButton.addEventListener("click", () => {
       logOutFunc()
     })
@@ -74,11 +74,17 @@ function createNav () {
       let searchMessageDiv = document.createElement("div")
       searchMessageDiv.setAttribute("id", "search-message")
       let searchInput = document.createElement("input")
+      searchInput.setAttribute("id", "search-people")
       searchInput.setAttribute("type", "search")
       searchInput.setAttribute("placeholder", "Search People")
       let searchBtn = document.createElement("button")
       searchBtn.setAttribute("id", "search-btn")
       searchBtn.textContent = "Search People"
+      searchBtn.addEventListener("click", () => {
+        let searchValue = searchInput.value
+        console.log(searchValue);
+        searchForPeople(searchValue)
+      })
       let messageText = document.createElement("textarea")
       messageText.setAttribute("name", "messages")
       messageText.setAttribute("id", "message-input")
@@ -109,6 +115,8 @@ function createNav () {
       let taskDiv = document.createElement("div")
       taskDiv.setAttribute("id", "task-div")
       taskDiv.innerHTML = "<h4>My Tasks</h4>"
+
+
 
 
       searchMessageDiv.appendChild(searchInput)
