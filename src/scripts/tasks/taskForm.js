@@ -91,4 +91,4 @@ function editTaskNameInput (event) {
 parentDiv.replaceChild (inputField, taskNameChange)
 }
 
-export {taskFormComponent, editTaskNameInput}
+export {taskFormComponent, editTaskNameInput, createNewTask}
