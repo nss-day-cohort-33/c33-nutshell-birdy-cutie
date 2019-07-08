@@ -1,6 +1,6 @@
 import {addEventForm} from "./events/addEventFormToDOM.js"
 import { taskFormComponent } from "./tasks/taskForm";
-import { messageBtnListener } from "./chat/entriesToChat";
+import { messageBtnListener } from "./chat/chatEvents";
 import { dashToDOM, mainEntryToDom } from "./mainEntryToDom.js"
 import { API } from "./api.js"
 import { grabFriends } from "./friends/getFriends.js"

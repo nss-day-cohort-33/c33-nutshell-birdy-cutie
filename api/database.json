@@ -59,6 +59,18 @@
       "email": "v",
       "password": "v",
       "id": 11
+    },
+    {
+      "username": "dustinuser",
+      "email": "dhobson21@gmail.com",
+      "password": "pass123",
+      "id": 12
+    },
+    {
+      "username": "tcarp54",
+      "email": "asdflj",
+      "password": "asdfasdf",
+      "id": 13
     }
   ],
   "friends": [
@@ -111,6 +123,14 @@
       "synopsis": "go",
       "date": "go",
       "id": 4
+    },
+    {
+      "userId": 12,
+      "title": "article",
+      "url": "go",
+      "synopsis": "yes",
+      "date": "now",
+      "id": 5
     }
   ],
   "events": [
@@ -135,87 +155,18 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "userId": 1,
-      "task": "clean",
-      "iscompleted": false
-    },
-    {
-      "userId": 11,
-      "task": "do things",
-      "completedate": "2019-07-08",
-      "iscompleted": false,
-      "id": 2
-    },
-    {
-      "userId": 11,
-      "task": "new task",
-      "completedate": "2019-07-08",
-      "iscompleted": false,
-      "id": 3
-    },
-    {
-      "userId": 7,
-      "task": "new task",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 4
-    },
-    {
-      "userId": 7,
-      "task": "work",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 8
-    },
-    {
-      "userId": 7,
-      "task": "new task",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 9
-    },
-    {
-      "userId": 7,
-      "task": "clean",
+      "userId": 12,
+      "task": "edited it again ",
       "completedate": "2019-12-31",
       "iscompleted": false,
-      "id": 10
+      "id": 6
     },
     {
-      "userId": 7,
-      "task": "last task",
+      "userId": 12,
+      "task": "edited please again again",
       "completedate": "2019-01-01",
       "iscompleted": false,
-      "id": 11
-    },
-    {
-      "userId": 7,
-      "task": "final task",
-      "completedate": "2021-01-01",
-      "iscompleted": false,
-      "id": 12
-    },
-    {
-      "userId": 7,
-      "task": "new task",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 13
-    },
-    {
-      "userId": 7,
-      "task": "la",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 14
-    },
-    {
-      "userId": 7,
-      "task": "last task",
-      "completedate": "2019-08-01",
-      "iscompleted": false,
-      "id": 15
+      "id": 7
     }
   ],
   "messages": [
@@ -323,6 +274,20 @@
       "message": "this is filler",
       "timestamp": 1562601467788,
       "id": 15
+    },
+    {
+      "userId": 1,
+      "username": "tcarp55",
+      "message": "heyy",
+      "timestamp": 1562612150095,
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "username": "tcarp55",
+      "message": "you",
+      "timestamp": 1562612159319,
+      "id": 17
     }
   ]
 }
