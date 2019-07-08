@@ -1,11 +1,12 @@
 import { createArticleForm, createSubmitArticleBtn } from "./articleHelperFunctions.js"
 
-const domContainer = document.querySelector("#dashboard-container")
 
-function articleClick(){
+
+function articleClick(func){
+    const domContainer = document.querySelector("#data-container")
     let articleForm = createArticleForm()
     domContainer.innerHTML = articleForm
-    domContainer.appendChild(createSubmitArticleBtn())
+    domContainer.appendChild(createSubmitArticleBtn(func))
 }
 
 export { articleClick }
