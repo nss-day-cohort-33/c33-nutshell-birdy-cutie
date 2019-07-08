@@ -49,10 +49,12 @@ function createSubmitArticleBtn(func) {
     let newArticle = {}
     if(document.querySelector("#article-id")){
       let articleId = document.querySelector("#article-id").value
-      newArticle = createArticle(userId, title, url, synopsis, date, articleId)
+      let articleTimestamp = document.querySelector("#article-timestamp").value
+      newArticle = createArticle(userId, title, url, synopsis, date,articleTimestamp, articleId)
     }
     else{
-      newArticle = createArticle(userId, title, url, synopsis, date, "");
+      let timestamp = Date.now()
+      newArticle = createArticle(userId, title, url, synopsis, date, timestamp, "");
     }
     console.log(newArticle);
     func("articles", newArticle).then(data => {
@@ -64,13 +66,14 @@ function createSubmitArticleBtn(func) {
   return SubmitBtn;
 }
 
-function createArticle(userId, title, url, synopsis, date, id) {
+function createArticle(userId, title, url, synopsis, date, timestamp, id) {
   return {
     userId,
     title,
     url,
     synopsis,
     date,
+    timestamp,
     id
   };
 }
