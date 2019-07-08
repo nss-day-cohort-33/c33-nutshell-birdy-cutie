@@ -1,12 +1,7 @@
 import {addEventForm} from "./events/addEventFormToDOM.js"
 import { taskFormComponent } from "./tasks/taskForm";
-<<<<<<< HEAD
 import { messageBtnListener } from "./chat/chatEvents";
-import { dashToDOM } from "./mainEntryToDom.js"
-=======
-import { messageBtnListener } from "./chat/entriesToChat";
 import { dashToDOM, mainEntryToDom } from "./mainEntryToDom.js"
->>>>>>> master
 import { API } from "./api.js"
 import { grabFriends } from "./friends/getFriends.js"
 import {searchForPeople} from "./friends/addSearchListToDOM.js"
