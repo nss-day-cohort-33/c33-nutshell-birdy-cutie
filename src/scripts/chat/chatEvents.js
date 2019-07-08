@@ -1,6 +1,8 @@
-function checkUserIdChat (userIdcheck, userId, messageP, editMessageButton){
+
+
+function checkUserIdChat (userIdcheck, userId, messageDiv, editMessageButton){
     if (userIdcheck === userId) {
-        messageP.appendChild(editMessageButton);
+        messageDiv.appendChild(editMessageButton);
 }
 }
 
