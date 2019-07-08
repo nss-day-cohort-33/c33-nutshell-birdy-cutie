@@ -323,6 +323,20 @@
       "message": "this is filler",
       "timestamp": 1562601467788,
       "id": 15
+    },
+    {
+      "userId": 1,
+      "username": "tcarp55",
+      "message": "heyy",
+      "timestamp": 1562612150095,
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "username": "tcarp55",
+      "message": "you",
+      "timestamp": 1562612159319,
+      "id": 17
     }
   ]
 }
