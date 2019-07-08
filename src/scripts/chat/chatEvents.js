@@ -1,6 +1,5 @@
 import { API } from "../api";
 import { buildMessageObj, messageInputLength } from "./chatHelpers.js";
-import { entriesToChat } from "./entriesToChat.js";
 import { populateDom } from "../main";
 
 function messageBtnListener() {
@@ -17,13 +16,13 @@ function messageBtnListener() {
         buildMessageObj(userId, username, message.value, timeStamp)
       ).then(data => {
         message.value = "";
-        entriesToChat();
+        populateDom();
       });
     });
   }
 }
 
-function checkUserIdChat(userIdcheck, userId, messageDiv, editMessageButton) {
+function checkUserIdChatListener(userIdcheck, userId, messageDiv, editMessageButton) {
   if (userIdcheck === userId) {
     messageDiv.appendChild(editMessageButton);
   }
@@ -64,4 +63,4 @@ function editMessageButtonListener(
       }
     }
 
-  export { messageBtnListener, checkUserIdChat, editMessageButtonListener };
+  export { messageBtnListener, checkUserIdChatListener, editMessageButtonListener };
