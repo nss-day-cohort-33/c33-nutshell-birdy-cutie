@@ -25,6 +25,16 @@ const API = {
         "Content-Type": "application/json"
       },
     });
+  },
+  editData(entity, object){
+    return fetch(`http://localhost:8088/${entity}/${object.id}`, {
+    method: "PUT",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(object)
+  });
   }
 };
 
