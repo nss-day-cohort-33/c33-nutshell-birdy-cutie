@@ -1,6 +1,7 @@
 import { API } from "../api";
 import { buildMessageObj, messageInputLength } from "./chatHelpers.js";
 import { entriesToChat } from "./entriesToChat.js";
+import { populateDom } from "../main";
 
 function messageBtnListener() {
   let userId = +sessionStorage.getItem("userId");
@@ -30,25 +31,37 @@ function checkUserIdChat(userIdcheck, userId, messageDiv, editMessageButton) {
 
 function editMessageButtonListener(
   event,
-  hiddenInput,
   messageHolderDiv,
   messageDiv
 ) {
   messageHolderDiv.style.display = "none";
-  let editMessageInput = document.createElement("input");
-  messageDiv.appendChild(editMessageInput);
   let editButtonId = event.target.id;
   let editButtonArr = editButtonId.split("--");
   let editButtonIdNum = editButtonArr[1];
-  hiddenInput.value = editButtonIdNum;
+  let editMessageInput = document.createElement("input");
+  editMessageInput.setAttribute("id", `edit-message-input--${editButtonIdNum}`)
+  messageDiv.appendChild(editMessageInput);
   fetch(`http://localhost:8088/messages/${editButtonIdNum}`).then(data =>
-    data.json().then(messageEdit => {
+    data.json()).then(messageEdit => {
       editMessageInput.value = messageEdit.message;
       editMessageInput.focus();
       document.querySelector(
         `#edit-message-btn--${messageEdit.id}`
       ).style.display = "none";
+      editMessageInput.addEventListener("keypress", event =>{
+        saveEditListener(event, messageEdit, editButtonIdNum)
+      })
     })
-  );
-}
-export { messageBtnListener, checkUserIdChat, editMessageButtonListener };
+    }
+
+    function saveEditListener (event, messageEdit, editButtonIdNum){
+      if (event.keyCode === 13){
+        messageEdit.message = document.querySelector(`#edit-message-input--${editButtonIdNum}`).value
+        API.editData("messages", messageEdit)
+        .then (data =>{
+          populateDom()
+        })
+      }
+    }
+
+  export { messageBtnListener, checkUserIdChat, editMessageButtonListener };

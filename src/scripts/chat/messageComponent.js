@@ -10,26 +10,22 @@ function messageComponent(obj, userId) {
   let messageHolderDiv = document.createElement("div");
   messageHolderDiv.setAttribute("id", `messager-holder-div--${obj.id}`);
   messageHolderDiv.textContent = `${obj.message}`;
-  let hiddenInput = document.createElement("input");
-  hiddenInput.setAttribute("type", "hidden");
-  hiddenInput.value = "";
   messageDiv.appendChild(usernameDiv);
   messageDiv.appendChild(messageHolderDiv);
-  messageDiv.appendChild(hiddenInput);
   let editMessageButton = document.createElement("button");
   editMessageButton.setAttribute("id", `edit-message-btn--${obj.id}`);
   editMessageButton.textContent = "Edit";
   messageHolderDiv.addEventListener("dblclick", event => {
     checkUserIdChat(obj.userId, userId, messageDiv, editMessageButton);
     editMessageButton.addEventListener("click", event => {
-      editMessageButtonListener(event, hiddenInput, messageHolderDiv, messageDiv);
+      editMessageButtonListener(event, messageHolderDiv, messageDiv);
     });
-    messageHolderDiv.addEventListener("click", event => {
-      let editButtonClick = document.querySelector(
-        `#edit-message-btn--${obj.id}`
-      );
-      editButtonClick.style.display = "none";
-    });
+    // messageHolderDiv.addEventListener("click", event => {
+    //   let editButtonClick = document.querySelector(
+    //     `#edit-message-btn--${obj.id}`
+    //   );
+    //   editButtonClick.style.display = "none";
+    // });
   });
   return messageDiv;
 }
