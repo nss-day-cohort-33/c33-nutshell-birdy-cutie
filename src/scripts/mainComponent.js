@@ -1,10 +1,16 @@
 import {addEventForm} from "./events/addEventFormToDOM.js"
 import { taskFormComponent } from "./tasks/taskForm";
+<<<<<<< HEAD
 import { messageBtnListener } from "./chat/chatEvents";
 import { dashToDOM } from "./mainEntryToDom.js"
+=======
+import { messageBtnListener } from "./chat/entriesToChat";
+import { dashToDOM, mainEntryToDom } from "./mainEntryToDom.js"
+>>>>>>> master
 import { API } from "./api.js"
 import { grabFriends } from "./friends/getFriends.js"
 import {searchForPeople} from "./friends/addSearchListToDOM.js"
+import {populateDom} from "./main.js"
 
 //function to create Nav Bar component
 import { articleClick } from "./article/mainArticle.js"
@@ -47,7 +53,10 @@ function createNav () {
 
     //add event listeners to all Nav Bar Buttons
     dashButton.addEventListener("click", () => {
-      console.log(event)
+      let dataContainer = document.querySelector("#dashboard-container")
+      dataContainer.innerHTML = ""
+      mainEntryToDom(createNav(), createDashboard())
+      populateDom()
     })
     articleButton.addEventListener("click", () => {
       articleClick(API.addData)
