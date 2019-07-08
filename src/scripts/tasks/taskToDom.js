@@ -10,7 +10,7 @@ function populateTaskContainer () {
     userTasks.forEach(task => {
       let taskCode =
       `
-      <div>
+      <div id = "taskDiv${task.id}">
       <h3 class="edit-task" id =taskName-${task.id}>${task.task}</h3>
       <p>Due by:${task.completedate}</p>
       <input type="checkbox" id = "isComplete-${task.id}" class = "isComplete">

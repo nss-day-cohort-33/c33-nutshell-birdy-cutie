@@ -59,6 +59,12 @@
       "email": "v",
       "password": "v",
       "id": 11
+    },
+    {
+      "username": "dustinuser",
+      "email": "dhobson21@gmail.com",
+      "password": "pass123",
+      "id": 12
     }
   ],
   "friends": [
@@ -111,6 +117,14 @@
       "synopsis": "go",
       "date": "go",
       "id": 4
+    },
+    {
+      "userId": 12,
+      "title": "article",
+      "url": "go",
+      "synopsis": "yes",
+      "date": "now",
+      "id": 5
     }
   ],
   "events": [
@@ -149,6 +163,15 @@
       "location": "nss",
       "timestamp": "2019-7-8 11:35:10.37 +03:00",
       "id": 4
+    },
+    {
+      "userId": 12,
+      "event_name": "new evnt",
+      "date": "2019-01-01",
+      "time": "01:00",
+      "location": "12p",
+      "timestamp": "2019-7-8 11:46:56.47 +03:00",
+      "id": 5
     }
   ],
   "tasks": [
@@ -234,6 +257,20 @@
       "completedate": "2019-08-01",
       "iscompleted": false,
       "id": 15
+    },
+    {
+      "userId": 12,
+      "task": "new task",
+      "completedate": "2019-01-01",
+      "iscompleted": false,
+      "id": 16
+    },
+    {
+      "userId": 12,
+      "task": "another one",
+      "completedate": "2019-01-01",
+      "iscompleted": false,
+      "id": 17
     }
   ],
   "messages": [
