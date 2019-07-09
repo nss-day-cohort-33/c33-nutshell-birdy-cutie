@@ -6,7 +6,7 @@ function populateTaskContainer () {
   taskBox.innerHTML = "<h4>My Tasks</h4><hr>"
   API.getData("tasks")
   .then(tasks => {
-    const userTasks = tasks.filter (task => task.userId === +sessionStorage.getItem("userId"))
+    const userTasks = tasks.filter (task => task.userId === +sessionStorage.getItem("userId") && task.iscompleted ===false)
     userTasks.forEach(task => {
       let taskCode =
       `

@@ -46,15 +46,32 @@ dashContainer.appendChild(taskForm)
 }
 
 //factory function creating new task object
-function createNewTask (taskName, taskDate) {
-  return {
-        userId: +sessionStorage.getItem("userId"),
-        task: taskName,
-        completedate: taskDate,
-        iscompleted: false
-
+function createNewTask (taskName, taskDate, boolean) {
+  if (boolean) {
+    return {
+      userId: +sessionStorage.getItem("userId"),
+      task: taskName,
+      completedate: taskDate,
+      iscompleted: boolean
+    }
+  }
+    return {
+      userId: +sessionStorage.getItem("userId"),
+      task: taskName,
+      completedate: taskDate,
+      iscompleted: false
   }
 }
+// function changeBoolean(taskName, taskDate, boolean) {
+//   if (boolean){
+//   return {
+//     userId: +sessionStorage.getItem("userId"),
+//     task: taskName,
+//     completedate: taskDate,
+//     iscompleted: boolean
+//   }
+// }
+// }
 
 //add new task object to db
 function addTaskToDb () {

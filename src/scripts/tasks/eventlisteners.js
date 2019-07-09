@@ -43,9 +43,21 @@ function taskComplete () {
   let taskCheckBoxes = document.querySelectorAll(".isComplete")
   taskCheckBoxes.forEach(box => {
     box.addEventListener("click", event => {
-    })
-  })
-}
+    let idNumb= event.target.id.split("-")[1]
+    console.log(idNumb)
+   API.getData("tasks", idNumb)
+   .then(obj => {
+     let taskNameValue = document.querySelector(`#taskName-${idNumb}`).textContent
+     let taskDateValue = document.querySelector(`#taskDate${idNumb}`).textContent.split(" ")[1]
+    let editedBooleanObj = createNewTask(taskNameValue, taskDateValue, true)
+    editedBooleanObj.id = idNumb
+    API.editData("tasks", editedBooleanObj)
+      .then(API.getData("tasks"))
+      .then(populateDom)
 
+   })
+  })
+})
+}
 
 export{editTaskEl, saveEditedTaskEl, taskComplete}
