@@ -26,13 +26,14 @@ const showEvent = (el, obj) => {
 // create event listener function for delete event button
 // being called in eventsHTML()
 
-const delBtnListener = ( btn) => {
+const delBtnListener = ( btn, obj) => {
     btn.addEventListener("click", () => {
         let currId = +sessionStorage.getItem("userId")
         let delId = event.target.id
         let delSplit = delId.split("-")
         let delName = document.querySelector(`#eventName-${delSplit[1]}`).textContent
-        let elementToRemove = document.getElementById(`event-user:${currId}`)
+        let elementToRemove = document.getElementById(`event${obj.id}-user:${currId}`)
+        let creatorNameToRemove = document.getElementById(`createdBy${obj.id}-user:${obj.userId}`)
         if (confirm(`Are you sure you want to remove "${delName}" event?`)) {
             // takes the id of the friendship and calls the API delete method
             API.deleteData("events", delSplit[1]).then(() => {
@@ -41,6 +42,7 @@ const delBtnListener = ( btn) => {
                 // and then be told is was successfully removed
                 alert(`${delName} event removed!`)
             })
+            creatorNameToRemove.remove()
             // I removed the element on the click of the button, so we don't have to refresh the whole
             // page, it just removes the element and looks as if the page was refreshed (less expensive)
             elementToRemove.remove()

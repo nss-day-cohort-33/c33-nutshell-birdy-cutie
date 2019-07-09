@@ -11,9 +11,9 @@ const eventsDOMElement = ( eventData) => {
     delEventBtn.setAttribute("id", `del-${eventData.id}`)
     editEventBtn.innerHTML = "Edit Event"
     delEventBtn.innerHTML = "Delete Event"
-    delBtnListener(delEventBtn)
+    delBtnListener(delEventBtn, eventData)
     editBtnListener(editEventBtn)
-    newHTML.setAttribute("id", `event-user:${eventData.userId}`)
+    newHTML.setAttribute("id", `event${eventData.id}-user:${eventData.userId}`)
     newHTML.innerHTML = createEventDOMHTML(eventData)
     newHTML.appendChild(delEventBtn)
     newHTML.appendChild(editEventBtn)
