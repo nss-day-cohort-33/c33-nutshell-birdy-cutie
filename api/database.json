@@ -35,6 +35,12 @@
       "email": "joe@nss.com",
       "password": "password123",
       "id": 6
+    },
+    {
+      "username": "Madi",
+      "email": "Madi@nss.com",
+      "password": "password123",
+      "id": 7
     }
   ],
   "friends": [
@@ -52,6 +58,11 @@
       "userId_1": 5,
       "userId_2": 4,
       "id": 3
+    },
+    {
+      "userId_1": 7,
+      "userId_2": 4,
+      "id": 4
     }
   ],
   "articles": [
@@ -142,18 +153,25 @@
       "synopsis": "This hit home for me",
       "date": "5/13/2019",
       "id": 13
+    },
+    {
+      "userId": 7,
+      "title": "How to Win Friends and Influence People",
+      "url": "link",
+      "synopsis": "How to swindle strangers into following you",
+      "date": "7/11/19",
+      "id": 14
+    },
+    {
+      "userId": 7,
+      "title": "What your Dog really thinks about you",
+      "url": "www.dog.com",
+      "synopsis": "He doesn't like you",
+      "date": "7/11/19",
+      "id": 15
     }
   ],
   "events": [
-    {
-      "userId": 7,
-      "event_name": "New timeStamp",
-      "date": "2019-07-11",
-      "time": "14:41",
-      "location": "Hackery",
-      "timestamp": 1562614885383,
-      "id": 2
-    },
     {
       "userId": 2,
       "event_name": "Mentor Night",
@@ -243,6 +261,15 @@
       "location": "NSS",
       "timestamp": 1562700095390,
       "id": 12
+    },
+    {
+      "userId": 7,
+      "event_name": "Pinball Championship",
+      "date": "2019-11-05",
+      "time": "17:00",
+      "location": "NSS",
+      "timestamp": 1562702216459,
+      "id": 13
     }
   ],
   "tasks": [
@@ -322,6 +349,13 @@
       "completedate": "2019-07-10",
       "iscompleted": false,
       "id": 16
+    },
+    {
+      "userId": 7,
+      "task": "Lift Weights",
+      "completedate": "2019-07-12",
+      "iscompleted": false,
+      "id": 17
     }
   ],
   "messages": [
@@ -394,6 +428,13 @@
       "message": "whats up guys...i'm JoeySheps",
       "timestamp": 1562700220649,
       "id": 10
+    },
+    {
+      "userId": 7,
+      "username": "Madi",
+      "message": "WAZZZZZUPPPPPPPPPPPPP",
+      "timestamp": 1562702282815,
+      "id": 11
     }
   ]
 }
