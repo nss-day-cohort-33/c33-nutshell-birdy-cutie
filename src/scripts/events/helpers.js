@@ -19,7 +19,7 @@ const getEventsFromDB = (idArr) => {
     // the current user's id is added to the end of the array
     eventsArr.push(currId)
     // the events data is called
-    API.getData("events").then( data => {
+    API.getData("events", "?_expand=user").then( data => {
         // the data is then looped through to see which ones pertain to the curr user or his/her friends
         data.forEach (eventObj => {
             // the id array is looped through to compare the id's to the event userId values

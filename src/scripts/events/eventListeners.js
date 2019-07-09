@@ -1,18 +1,25 @@
 import {addEventToDB, updateEventToDB} from "./addEventsToDB.js"
 import {addEventEditForm} from "./addEventFormToDOM.js"
 import { API } from "../api.js";
-import {createdByElement} from "./createEventElements"
 
+// this revels the creator's username on the double click it takes an argument of an element and an object
 const showCreatedBy = (el, obj) => {
     el.addEventListener("dblclick", () => {
-        createdByElement(obj)
-        console.log("you can show user!");
+        // createdByElement(obj)
+        document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.visibility = "visible"
+        // then a second click event is added to the same element to hide the creator's username
+        showEvent(el, obj)
     })
 }
 
-const showEvent = (el) => {
+// this will hid the username if the creator's username is is visible. It will also re-add the click event to
+// reveal the username
+const showEvent = (el, obj) => {
     el.addEventListener("dblclick", () => {
-        console.log("you can show event, again!");
+        if (document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.visibility = "visible") {
+            document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.visibility = "hidden"
+            showCreatedBy(el, obj)
+        }
     })
 }
 
