@@ -11,26 +11,26 @@ function createArticleForm() {
   return `<form>
     <section>
       <fieldset>
-        <label>title</label>
-        <input type="text" name="article-title" id="article-title" />
+        <label>Title</label>
+        <input type="text" name="article-title" id="article-title" class="form-control"/>
       </fieldset>
     </section>
     <section>
       <fieldset>
         <label>URL</label>
-        <input type="text" name="article-url" id="article-url" />
+        <input type="text" name="article-url" id="article-url" class="form-control"/>
       </fieldset>
     </section>
     <section>
       <fieldset>
-        <label>synopsis</label>
-        <textarea name="article-synopsis" id="article-synopsis" cols="30" rows="5"></textarea>
+        <label>Synopsis</label>
+        <textarea name="article-synopsis" id="article-synopsis" cols="30" rows="5" class="form-control"></textarea>
       </fieldset>
     </section>
     <section>
         <fieldset>
-          <label>date</label>
-          <input type="text" name="article-date" id="article-date" />
+          <label>Date</label>
+          <input type="text" name="article-date" id="article-date" class="form-control"/>
         </fieldset>
       </section>
   </form>`;
