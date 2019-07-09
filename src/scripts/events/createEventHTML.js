@@ -1,3 +1,11 @@
+const createByHTML = (obj) => {
+  let createdByStr = `
+  <h5>Created By: </h5>
+  <h7>${obj.user.username}
+  `
+  return createdByStr
+}
+
 const createEventFormHTML = id => {
   let formString =
   `
@@ -64,4 +72,4 @@ const createEventDOMHTML = eventData => {
   return stringForDOM
 }
 
-export {createEventFormHTML, createEventDOMHTML, createEventEditHTML}
+export {createEventFormHTML, createEventDOMHTML, createEventEditHTML, createByHTML}

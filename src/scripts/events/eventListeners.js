@@ -1,6 +1,20 @@
 import {addEventToDB, updateEventToDB} from "./addEventsToDB.js"
 import {addEventEditForm} from "./addEventFormToDOM.js"
 import { API } from "../api.js";
+import {createdByElement} from "./createEventElements"
+
+const showCreatedBy = (el, obj) => {
+    el.addEventListener("dblclick", () => {
+        createdByElement(obj)
+        console.log("you can show user!");
+    })
+}
+
+const showEvent = (el) => {
+    el.addEventListener("dblclick", () => {
+        console.log("you can show event, again!");
+    })
+}
 
 // create event listener function for delete event button
 // being called in eventsHTML()
@@ -71,4 +85,4 @@ const saveEditBtnListener = ( btn) => {
         }
     })
 }
-export {delBtnListener, editBtnListener, saveBtnListener, saveEditBtnListener}
+export {delBtnListener, editBtnListener, saveBtnListener, saveEditBtnListener, showCreatedBy, showEvent}

@@ -1,5 +1,5 @@
-import {createEventFormHTML, createEventDOMHTML, createEventEditHTML} from "./createEventHTML.js"
-import {delBtnListener, editBtnListener, saveBtnListener, saveEditBtnListener} from "./eventListeners"
+import {createEventFormHTML, createEventDOMHTML, createEventEditHTML, createByHTML} from "./createEventHTML.js"
+import {delBtnListener, editBtnListener, saveBtnListener, saveEditBtnListener, showCreatedBy, showEvent} from "./eventListeners"
 // create funtion that makes HTML snippet to add events to DOM
 // being called in addEventsToDOM()
 
@@ -17,6 +17,18 @@ const eventsDOMElement = ( eventData) => {
     newHTML.innerHTML = createEventDOMHTML(eventData)
     newHTML.appendChild(delEventBtn)
     newHTML.appendChild(editEventBtn)
+    showCreatedBy(newHTML, eventData)
+    return newHTML
+}
+
+const createdByElement = (obj) => {
+    let parentDiv = document.querySelector("#event-div")
+    let newHTML = document.createElement("article")
+    let replaceDiv = document.querySelector("id", `#event-user:${obj.userId}`)
+    newHTML.setAttribute("id", `createdBy-user:${obj.userId}`)
+    newHTML.innerHTML = createByHTML(obj)
+    showEvent(newHTML)
+    parentDiv.replaceChild(newHTML, replaceDiv)
     return newHTML
 }
 
@@ -59,6 +71,7 @@ const addEventElementToDOM = (dataObj) => {
     return eventLog
 }
 
+
 // This takes an array of objects and creates them into the HTML that will be added to the DOM.
 // Only events the current user created will have "delete" and "edit" buttons
 
@@ -71,4 +84,4 @@ const createEventListElements = (obj, currId) => {
         document.querySelector(`#edit-${obj.id}`).remove()
     }
 }
-export {eventFormElement, addEventElementToDOM, eventEditElement, createEventListElements}
+export {eventFormElement, addEventElementToDOM, eventEditElement, createEventListElements, createdByElement}
