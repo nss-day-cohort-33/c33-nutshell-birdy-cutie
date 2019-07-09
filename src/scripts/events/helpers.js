@@ -39,36 +39,21 @@ const getEventsFromDB = (idArr) => {
 // After they timestamps are pulled out and sorted, they are used in transformEventsToHTML()
 
 const putEventsInOrder = (arr) => {
-    let timeArr = []
-    // loops through object array to get all the times stamps
-    arr.forEach ( eventDataObj => {
-        for (let foo of Object.entries(eventDataObj)) {
-            if (foo[0] === "timestamp") {
-                timeArr.push(foo[1]);
-            }
-        }
-    })
     // sorts the time stamp from oldest to newest. So newest is on bottom.
     // to sort the other way, just make the "-" a "+"
-    timeArr.sort((a,b) => a-b)
-    // loops through the timestamp array
-    timeArr.forEach (time => {
-        addOrderedEventsToDOM(arr, time)
-    })
+    arr.sort((a,b) => a.timestamp-b.timestamp)
+    addOrderedEventsToDOM(arr)
 }
 
 // After the events are sorted in the right order transformEventsToHTML()
 // cross references them to make sure they are added to the DOM correctly
 
-const addOrderedEventsToDOM = (arr, time) => {
+const addOrderedEventsToDOM = (arr) => {
     let currId = +sessionStorage.getItem("userId")
-    // loops through the object array
+    // loops through the obj array
     arr.forEach (eventObj => {
-        // this is saying that if the time stamp equals the object time stamp then
         // add to the DOM
-        if (time === eventObj.timestamp) {
-            createEventListElements(eventObj, currId)
-        }
+        createEventListElements(eventObj, currId)
     })
 }
 

@@ -154,11 +154,11 @@
     },
     {
       "userId": 6,
-      "event_name": "Running 4 Edit",
+      "event_name": "Running 4 Edits",
       "date": "2019-07-09",
       "time": "16:30",
       "location": "Nolensville",
-      "timestamp": 1562634066858,
+      "timestamp": "1562634066858",
       "id": 5
     },
     {
@@ -167,7 +167,7 @@
       "date": "2019-07-10",
       "time": "17:00",
       "location": "NSS",
-      "timestamp": 1562631240599,
+      "timestamp": 1562634066865,
       "id": 6
     }
   ],

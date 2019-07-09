@@ -12,7 +12,7 @@ const delBtnListener = ( btn) => {
         let delSplit = delId.split("-")
         let delName = document.querySelector(`#eventName-${delSplit[1]}`).textContent
         let elementToRemove = document.getElementById(`event-user:${currId}`)
-        if (confirm(`Are you sure you want to remove ${delName} event?`)) {
+        if (confirm(`Are you sure you want to remove "${delName}" event?`)) {
             // takes the id of the friendship and calls the API delete method
             API.deleteData("events", delSplit[1]).then(() => {
                 // added the alert within the .then() so that the element will be removed before the
