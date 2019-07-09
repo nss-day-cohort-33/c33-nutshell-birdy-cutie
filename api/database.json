@@ -5,72 +5,6 @@
       "username": "tcarp55",
       "email": "new@gmail.com",
       "password": "thisthing"
-    },
-    {
-      "id": 2,
-      "username": "DannyPants",
-      "email": "dude@gmail.com",
-      "password": "otherThing"
-    },
-    {
-      "username": "Scott",
-      "email": "123@mail.com",
-      "password": "wewae",
-      "id": 3
-    },
-    {
-      "username": "Scott",
-      "email": "yoy",
-      "password": "wewae",
-      "id": 4
-    },
-    {
-      "username": "Danny",
-      "email": "D@email.com",
-      "password": "password",
-      "id": 6
-    },
-    {
-      "username": "Dustin",
-      "email": "DH@email.com",
-      "password": "password123",
-      "id": 7
-    },
-    {
-      "username": "Krystal",
-      "email": "K@email.com",
-      "password": "pass123",
-      "id": 8
-    },
-    {
-      "username": "krystal",
-      "email": "K@email.com",
-      "password": "123",
-      "id": 9
-    },
-    {
-      "username": "Tyler",
-      "email": "t@email.com",
-      "password": "123",
-      "id": 10
-    },
-    {
-      "username": "f",
-      "email": "v",
-      "password": "v",
-      "id": 11
-    },
-    {
-      "username": "dustinuser",
-      "email": "dhobson21@gmail.com",
-      "password": "pass123",
-      "id": 12
-    },
-    {
-      "username": "tcarp54",
-      "email": "asdflj",
-      "password": "asdfasdf",
-      "id": 13
     }
   ],
   "friends": [
@@ -78,26 +12,6 @@
       "id": 1,
       "userId_1": 2,
       "userId_2": 6
-    },
-    {
-      "id": 2,
-      "userId_1": 8,
-      "userId_2": 6
-    },
-    {
-      "id": 3,
-      "userId_1": 10,
-      "userId_2": 7
-    },
-    {
-      "userId_1": 4,
-      "userId_2": 1,
-      "id": 4
-    },
-    {
-      "userId_1": 1,
-      "userId_2": 6,
-      "id": 5
     }
   ],
   "articles": [
@@ -106,31 +20,9 @@
       "userId": 1,
       "url": "https://www.cnbc.com/2019/07/01/here-are-the-biggest-stock-winners-from-the-us-china-trade-ceasefire.html",
       "title": "Here are the biggest stock winners from the US-China trade ceasefire",
-      "synopsis": "somethings happened"
-    },
-    {
-      "userId": 11,
-      "title": "as;dlkjf",
-      "url": "ij;ozfij;oje",
-      "synopsis": "hope this works",
+      "synopsis": "somethings happened",
       "date": "f",
-      "id": 3
-    },
-    {
-      "userId": 12,
-      "title": "article",
-      "url": "go",
-      "synopsis": "yes",
-      "date": "now",
-      "id": 5
-    },
-    {
-      "userId": 7,
-      "title": "yes",
-      "url": "no",
-      "synopsis": "yes",
-      "date": "no",
-      "id": 6
+      "timestamp": 1562698980519
     }
   ],
   "events": [
@@ -142,33 +34,6 @@
       "location": "Hackery",
       "timestamp": 1562614885383,
       "id": 2
-    },
-    {
-      "userId": 6,
-      "event_name": "running3 Edit",
-      "date": "2019-07-01",
-      "time": "16:30",
-      "location": "nashville",
-      "timestamp": "1562634066850",
-      "id": 4
-    },
-    {
-      "userId": 6,
-      "event_name": "Running 4 Edits",
-      "date": "2019-07-09",
-      "time": "16:30",
-      "location": "Nolensville",
-      "timestamp": "1562634066858",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "event_name": "Running5",
-      "date": "2019-07-10",
-      "time": "17:00",
-      "location": "NSS",
-      "timestamp": 1562634066865,
-      "id": 6
     }
   ],
   "tasks": [
@@ -178,41 +43,6 @@
       "completedate": "2019-12-31",
       "iscompleted": true,
       "id": 6
-    },
-    {
-      "userId": 12,
-      "task": "edited please again again",
-      "completedate": "2019-01-01",
-      "iscompleted": true,
-      "id": 7
-    },
-    {
-      "userId": 7,
-      "task": "Clean everything",
-      "completedate": "2019-01-01",
-      "iscompleted": true,
-      "id": 8
-    },
-    {
-      "userId": 7,
-      "task": "Clean Nothing at all",
-      "completedate": "2019-03-01",
-      "iscompleted": true,
-      "id": 9
-    },
-    {
-      "userId": 7,
-      "task": "Clean some things",
-      "completedate": "2021-03-03",
-      "iscompleted": true,
-      "id": 10
-    },
-    {
-      "userId": 7,
-      "task": "new tassk",
-      "completedate": "2019-01-01",
-      "iscompleted": false,
-      "id": 11
     }
   ],
   "messages": [
@@ -222,125 +52,6 @@
       "message": "help",
       "timestamp": 1562600594632,
       "id": 1
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "help",
-      "timestamp": 1562600882228,
-      "id": 2
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "help!",
-      "timestamp": 1562601092214,
-      "id": 3
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "help again",
-      "timestamp": 1562601163842,
-      "id": 4
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "lets get this",
-      "timestamp": 1562601284725,
-      "id": 5
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "ds;flkjj",
-      "timestamp": 1562601320884,
-      "id": 6
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "sdjfasdflkj;",
-      "timestamp": 1562601355757,
-      "id": 7
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601444629,
-      "id": 8
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601449687,
-      "id": 9
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601452953,
-      "id": 10
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601455963,
-      "id": 11
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601458348,
-      "id": 12
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601461905,
-      "id": 13
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601464824,
-      "id": 14
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601467788,
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "username": "tcarp55",
-      "message": "heyy",
-      "timestamp": 1562612150095,
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "username": "tcarp55",
-      "message": "you",
-      "timestamp": 1562612159319,
-      "id": 17
-    },
-    {
-      "userId": 7,
-      "username": "Dustin",
-      "message": "goodbye",
-      "timestamp": 1562638254527,
-      "id": 18
     }
   ]
 }
