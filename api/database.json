@@ -72,6 +72,7 @@
       "url": "https://www.espn.com/nba/story/_/id/27149206/can-lebron-make-lakers-roster-work",
       "synopsis": "Will Lebron's new Lakers team be better than his team last year",
       "date": "7/9/2019",
+      "timestamp": 1562704879546,
       "id": 4
     },
     {
@@ -80,6 +81,7 @@
       "url": "https://www.cnn.com/2019/07/09/entertainment/stranger-things-pop-culture/index.html",
       "synopsis": "There are so many cool 1980's references in Season 3 of Stranger Things!",
       "date": "7/9/19",
+      "timestamp": 1562704879362,
       "id": 5
     },
     {
@@ -88,6 +90,7 @@
       "url": "https://www.countryliving.com/home-design/g1887/tiny-house/",
       "synopsis": "Something about tiny houses, i think",
       "date": "7/2/2019",
+      "timestamp": 1562704879145,
       "id": 6
     },
     {
@@ -96,6 +99,7 @@
       "url": "https://www.leaf.tv/articles/how-to-make-a-dress-out-of-a-trash-bag/",
       "synopsis": "Fashion-chic!",
       "date": "7/9/19",
+      "timestamp": 1562704878342,
       "id": 7
     },
     {
@@ -104,6 +108,7 @@
       "url": "https://www.si.com/soccer/2019/07/08/uswnt-welcomed-back-home-womens-world-cup-winners-video",
       "synopsis": "The USWNT are legends that deserve to be enshrined in gold and paraded about town!",
       "date": "7/8/19",
+      "timestamp": 1562704875231,
       "id": 8
     },
     {
@@ -112,6 +117,7 @@
       "url": "https://blog.alexdevero.com/6-simple-tips-writing-clean-code/",
       "synopsis": "Tips for people on how to write cleaner code...I don't personally need this but others might.",
       "date": "7/9/19",
+      "timestamp": 1562704876312,
       "id": 9
     },
     {
@@ -120,6 +126,7 @@
       "url": "https://news.yahoo.com/pentagon-wants-vr-train-nuclear-132600336.html",
       "synopsis": "Today's favorite gaming platforms are tomorrow's war weapons",
       "date": "7/5/2019",
+      "timestamp": 1562704873469,
       "id": 10
     },
     {
@@ -128,6 +135,7 @@
       "url": "https://swimswam.com/10-reasons-swimmers-best-kids/",
       "synopsis": "Swimmers rule, Land-walkers drool!",
       "date": "7/11/2017",
+      "timestamp": 1562704879145,
       "id": 11
     },
     {
@@ -136,6 +144,7 @@
       "url": "https://www.listchallenges.com/92-best-board-games-of-all-time",
       "synopsis": "Who doesn't need a list of 76 awesome boardgames?",
       "date": "7/8/2019",
+      "timestamp": 1562704879563,
       "id": 12
     },
     {
@@ -144,6 +153,7 @@
       "url": "https://juliawillwrite.blogspot.com/2019/05/what-to-do-when-students-dont-like-you.html",
       "synopsis": "This hit home for me",
       "date": "5/13/2019",
+      "timestamp": 1562704871568,
       "id": 13
     },
     {
@@ -152,6 +162,7 @@
       "url": "link",
       "synopsis": "How to swindle strangers into following you",
       "date": "7/11/19",
+      "timestamp": 1562704872465,
       "id": 14
     },
     {
@@ -160,6 +171,7 @@
       "url": "www.dog.com",
       "synopsis": "He doesn't like you",
       "date": "7/11/19",
+      "timestamp": 1562704874732,
       "id": 15
     }
   ],
@@ -281,7 +293,7 @@
     },
     {
       "userId": 2,
-      "task": "Clean car",
+      "task": "Clean cars",
       "completedate": "2019-07-15",
       "iscompleted": false,
       "id": 8
@@ -348,6 +360,13 @@
       "completedate": "2019-07-12",
       "iscompleted": false,
       "id": 17
+    },
+    {
+      "userId": 2,
+      "task": "Completed Task",
+      "completedate": "2019-12-01",
+      "iscompleted": true,
+      "id": 18
     }
   ],
   "messages": [
