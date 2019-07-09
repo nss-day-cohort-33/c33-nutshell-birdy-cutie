@@ -71,6 +71,12 @@
       "email": "asdflj",
       "password": "asdfasdf",
       "id": 13
+    },
+    {
+      "username": "chris",
+      "email": "srgea",
+      "password": "123",
+      "id": 14
     }
   ],
   "friends": [
@@ -98,6 +104,16 @@
       "userId_1": 1,
       "userId_2": 6,
       "id": 5
+    },
+    {
+      "userId_1": 1,
+      "userId_2": 7,
+      "id": 6
+    },
+    {
+      "userId_1": 1,
+      "userId_2": 11,
+      "id": 7
     }
   ],
   "articles": [
@@ -341,6 +357,13 @@
       "message": "goodbye",
       "timestamp": 1562638254527,
       "id": 18
+    },
+    {
+      "userId": 14,
+      "username": "chris",
+      "message": "hello",
+      "timestamp": 1562687041819,
+      "id": 19
     }
   ]
 }
