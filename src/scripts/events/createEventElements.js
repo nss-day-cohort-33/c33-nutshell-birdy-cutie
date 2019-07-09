@@ -11,9 +11,14 @@ const eventsDOMElement = ( eventData) => {
     delEventBtn.setAttribute("id", `del-${eventData.id}`)
     editEventBtn.innerHTML = "Edit Event"
     delEventBtn.innerHTML = "Delete Event"
+    editEventBtn.setAttribute("class", "btn")
+    editEventBtn.setAttribute("class", "btn-warning")
+    delEventBtn.setAttribute("class", "btn")
+    delEventBtn.setAttribute("class", "btn-danger")
     delBtnListener(delEventBtn, eventData)
     editBtnListener(editEventBtn)
     newHTML.setAttribute("id", `event${eventData.id}-user:${eventData.userId}`)
+    newHTML.setAttribute("style", "background-color: #E8E6E6")
     newHTML.innerHTML = createEventDOMHTML(eventData)
     newHTML.appendChild(delEventBtn)
     newHTML.appendChild(editEventBtn)

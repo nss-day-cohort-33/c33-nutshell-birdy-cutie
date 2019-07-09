@@ -26,6 +26,14 @@ function createNav () {
     let taskButton = document.createElement("button")
     let friendButton = document.createElement("button")
     let logOutButton = document.createElement("button")
+    dashButton.setAttribute("class", "hvr-grow-shadow")
+    articleButton.setAttribute("class", "hvr-grow-shadow")
+    eventButton.setAttribute("class", "hvr-grow-shadow")
+    taskButton.setAttribute("class", "hvr-grow-shadow")
+    friendButton.setAttribute("class", "hvr-grow-shadow")
+    logOutButton.setAttribute("class", "hvr-grow-shadow")
+    navBar.setAttribute("class", "navbar")
+    navBar.setAttribute("class", "navbar-default")
     logOutButton.textContent = "Log Out"
     dashButton.textContent = "My Dashboard"
     articleButton.textContent = "Add Article"
@@ -107,17 +115,21 @@ function createNav () {
       dashColumnsSection.setAttribute("id", "dash-columns-container")
       let chatDiv = document.createElement("div")
       chatDiv.setAttribute("id", "chat-div")
+      chatDiv.setAttribute("class", "container")
       chatDiv.innerHTML = "<h4>Chat</h4>"
       let chatMessageDiv =document.createElement("div")
       chatMessageDiv.setAttribute("id", "chat-message-div")
       let articleDiv = document.createElement("div")
       articleDiv.setAttribute("id", "article-div")
+      articleDiv.setAttribute("class", "container")
       articleDiv.innerHTML = "<h4>Articles</h4>"
       let eventDiv = document.createElement("div")
       eventDiv.setAttribute("id", "event-div")
+      eventDiv.setAttribute("class", "container")
       eventDiv.innerHTML = "<h4>Events</h4>"
       let taskDiv = document.createElement("div")
       taskDiv.setAttribute("id", "task-div")
+      taskDiv.setAttribute("class", "container")
       taskDiv.innerHTML = "<h4>My Tasks</h4>"
 
 

@@ -15,7 +15,6 @@ function addArticleToDom() {
         delete friendArr[i];
       }
     }
-    console.log(friendArr);
     API.getData("articles", "?_expand=user").then(data => {
       let newData = data.filter(article => {
         if (article.userId === currentUserId) {
@@ -42,7 +41,6 @@ function addArticleToDom() {
     });
   });
 
-  console.log(currentUserId);
 
   // console.log friendArr)
 }

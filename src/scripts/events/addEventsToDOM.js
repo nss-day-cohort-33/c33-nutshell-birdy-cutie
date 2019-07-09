@@ -3,7 +3,6 @@ import {API} from "../api.js"
 // this function gets the friends Data and pushes the Id's to an array
 const addEventsToDOM = () => {
     let id = +sessionStorage.getItem("userId")
-    console.log(id);
     let idArr = []
     document.querySelector("#event-div").innerHTML = "<h4>Events</h4>"
     // call the friends DB
