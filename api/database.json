@@ -135,15 +135,6 @@
   ],
   "events": [
     {
-      "id": 1,
-      "userId": 1,
-      "event_name": "running",
-      "date": "2019-07-01",
-      "location": "nashville",
-      "time": "16:00",
-      "timestamp": 562600594632
-    },
-    {
       "userId": 7,
       "event_name": "New timeStamp",
       "date": "2019-07-11",
@@ -151,6 +142,33 @@
       "location": "Hackery",
       "timestamp": 1562614885383,
       "id": 2
+    },
+    {
+      "id": 4,
+      "userId": 6,
+      "event_name": "running3",
+      "date": "2019-07-01",
+      "location": "nashville",
+      "time": "16:30",
+      "timestamp": 562600594630
+    },
+    {
+      "userId": 6,
+      "event_name": "Running 4",
+      "date": "2019-07-09",
+      "time": "16:30",
+      "location": "Nolensville",
+      "timestamp": 1562631008694,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "event_name": "Running5",
+      "date": "2019-07-10",
+      "time": "17:00",
+      "location": "NSS",
+      "timestamp": 1562631240599,
+      "id": 6
     }
   ],
   "tasks": [

@@ -13,7 +13,7 @@ const eventsDOMElement = ( eventData) => {
     delEventBtn.innerHTML = "Delete Event"
     delBtnListener(delEventBtn)
     editBtnListener(editEventBtn)
-    newHTML.setAttribute("id", `user${eventData.userId}event-${eventData.id}`)
+    newHTML.setAttribute("id", `event-user:${eventData.userId}`)
     newHTML.innerHTML = createEventDOMHTML(eventData)
     newHTML.appendChild(delEventBtn)
     newHTML.appendChild(editEventBtn)
@@ -59,5 +59,16 @@ const addEventElementToDOM = (dataObj) => {
     return eventLog
 }
 
+// This takes an array of objects and creates them into the HTML that will be added to the DOM.
+// Only events the current user created will have "delete" and "edit" buttons
 
-export {eventFormElement, addEventElementToDOM, eventEditElement}
+const createEventListElements = (obj, currId) => {
+    addEventElementToDOM(obj)
+    // this removes the edit and delete buttons on all events that are not created by the
+    // current user
+    if (obj.userId !== currId) {
+        document.querySelector(`#del-${obj.id}`).remove()
+        document.querySelector(`#edit-${obj.id}`).remove()
+    }
+}
+export {eventFormElement, addEventElementToDOM, eventEditElement, createEventListElements}

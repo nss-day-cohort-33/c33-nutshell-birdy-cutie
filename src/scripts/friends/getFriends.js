@@ -41,15 +41,15 @@ const grabFriends = () => {
     let id = +sessionStorage.getItem("userId")
     console.log(id);
     // call the friends DB
+    // set an empty array to hold friends' id's
+    let idArr = []
+    //  set friendShipId variable to hold relationship Id
+    let friendShipId = null
     API.getData("friends").then(data =>{
         // create an empty arr to send id's to
         data.filter( key => {
             // This if statement allows only objects with the current user's id to be looked at
             if (key.userId_1 === id || key.userId_2 === id) {
-                // set an empty array to hold friends' id's
-                let idArr = []
-                //  set friendShipId variable to hold relationship Id
-                let friendShipId = null
                 for (let foo of Object.entries(key)) {
                     let userArr = foo[0]
                     let splitArr = userArr.split("_")
@@ -59,28 +59,28 @@ const grabFriends = () => {
                         friendShipId = key.id
                     }
                 }
-                // this uses the array to see if any of the id's include the current user's id
-                if (idArr) {
-                    // will remove message of add friends
-                    let newFriendList = document.querySelector("#friendsList")
-                    newFriendList.innerHTML = ""
-                    // if it does, it is going to loop through the array and only grab the id's
-                    // that don't match the current user's id
-                    idArr.forEach( friendId => {
-                        if (friendId !== id) {
-                            // it is then going to use the friend's id to call the specific user DB obj
-                            API.getData("users", friendId).then(data => {
-                            // Then it passes the returned user obj into the createFriendEl
-                            // which takes an obj as an argument to create the HTML snippet for posting friends
-                            // to the DOM
-                            let name = data.username
-                            createFriendEl(data, friendShipId, name)
-                            })
-                        }
-                    })
-                }
             }
         })
+        // this uses the array to see if any of the id's include the current user's id
+        if (idArr) {
+            // will remove message of add friends
+            let newFriendList = document.querySelector("#friendsList")
+            newFriendList.innerHTML = ""
+            // if it does, it is going to loop through the array and only grab the id's
+            // that don't match the current user's id
+            idArr.forEach( friendId => {
+                if (friendId !== id) {
+                    // it is then going to use the friend's id to call the specific user DB obj
+                    API.getData("users", friendId).then(data => {
+                    // Then it passes the returned user obj into the createFriendEl
+                    // which takes an obj as an argument to create the HTML snippet for posting friends
+                    // to the DOM
+                    let name = data.username
+                    createFriendEl(data, friendShipId, name)
+                    })
+                }
+            })
+        }
     })
 }
 // a user will be able to search for other users
