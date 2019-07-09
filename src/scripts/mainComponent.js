@@ -26,6 +26,14 @@ function createNav () {
     let taskButton = document.createElement("button")
     let friendButton = document.createElement("button")
     let logOutButton = document.createElement("button")
+    dashButton.setAttribute("class", "hvr-grow-shadow")
+    articleButton.setAttribute("class", "hvr-grow-shadow")
+    eventButton.setAttribute("class", "hvr-grow-shadow")
+    taskButton.setAttribute("class", "hvr-grow-shadow")
+    friendButton.setAttribute("class", "hvr-grow-shadow")
+    logOutButton.setAttribute("class", "hvr-grow-shadow")
+    navBar.setAttribute("class", "navbar")
+    navBar.setAttribute("class", "navbar-default")
     logOutButton.textContent = "Log Out"
     dashButton.textContent = "My Dashboard"
     articleButton.textContent = "Add Article"
