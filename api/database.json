@@ -4,180 +4,264 @@
       "id": 1,
       "username": "tcarp55",
       "email": "new@gmail.com",
-      "password": "thisthing"
-    },
-    {
-      "id": 2,
-      "username": "DannyPants",
-      "email": "dude@gmail.com",
-      "password": "otherThing"
-    },
-    {
-      "username": "Scott",
-      "email": "123@mail.com",
-      "password": "wewae",
-      "id": 3
-    },
-    {
-      "username": "Scott",
-      "email": "yoy",
-      "password": "wewae",
-      "id": 4
-    },
-    {
-      "username": "Danny",
-      "email": "D@email.com",
-      "password": "password",
-      "id": 6
+      "password": "password123"
     },
     {
       "username": "Dustin",
-      "email": "DH@email.com",
+      "email": "dustin@nss.com",
       "password": "password123",
-      "id": 7
+      "id": 2
     },
     {
       "username": "Krystal",
-      "email": "K@email.com",
-      "password": "pass123",
-      "id": 8
+      "email": "krystal@nss.com",
+      "password": "password123",
+      "id": 3
     },
     {
-      "username": "krystal",
-      "email": "K@email.com",
-      "password": "123",
-      "id": 9
+      "username": "Danny",
+      "email": "danny@nss.com",
+      "password": "password123",
+      "id": 4
     },
     {
       "username": "Tyler",
-      "email": "t@email.com",
-      "password": "123",
-      "id": 10
+      "email": "tyler@nss.com",
+      "password": "password123",
+      "id": 5
     },
     {
-      "username": "f",
-      "email": "v",
-      "password": "v",
-      "id": 11
+      "username": "Joe",
+      "email": "joe@nss.com",
+      "password": "password123",
+      "id": 6
     },
     {
-      "username": "dustinuser",
-      "email": "dhobson21@gmail.com",
-      "password": "pass123",
-      "id": 12
-    },
-    {
-      "username": "tcarp54",
-      "email": "asdflj",
-      "password": "asdfasdf",
-      "id": 13
+      "username": "Madi",
+      "email": "Madi@nss.com",
+      "password": "password123",
+      "id": 7
     }
   ],
   "friends": [
     {
-      "id": 1,
-      "userId_1": 2,
-      "userId_2": 6
-    },
-    {
-      "id": 2,
-      "userId_1": 8,
-      "userId_2": 6
-    },
-    {
-      "id": 3,
-      "userId_1": 10,
-      "userId_2": 7
+      "userId_1": 3,
+      "userId_2": 2,
+      "id": 1
     },
     {
       "userId_1": 4,
-      "userId_2": 1,
-      "id": 4
+      "userId_2": 2,
+      "id": 2
     },
     {
-      "userId_1": 1,
-      "userId_2": 6,
-      "id": 5
+      "userId_1": 5,
+      "userId_2": 4,
+      "id": 3
+    },
+    {
+      "userId_1": 7,
+      "userId_2": 4,
+      "id": 4
     }
   ],
   "articles": [
     {
-      "id": 1,
-      "userId": 1,
-      "url": "https://www.cnbc.com/2019/07/01/here-are-the-biggest-stock-winners-from-the-us-china-trade-ceasefire.html",
-      "title": "Here are the biggest stock winners from the US-China trade ceasefire",
-      "synopsis": "somethings happened"
+      "userId": 2,
+      "title": "Can Lebron Make This Roster Work?",
+      "url": "https://www.espn.com/nba/story/_/id/27149206/can-lebron-make-lakers-roster-work",
+      "synopsis": "Will Lebron's new Lakers team be better than his team last year",
+      "date": "7/9/2019",
+      "id": 4
     },
     {
-      "userId": 11,
-      "title": "as;dlkjf",
-      "url": "ij;ozfij;oje",
-      "synopsis": "hope this works",
-      "date": "f",
-      "id": 3
-    },
-    {
-      "userId": 12,
-      "title": "article",
-      "url": "go",
-      "synopsis": "yes",
-      "date": "now",
+      "userId": 2,
+      "title": "Decoding all those 'Stranger Things' '80s pop culture references",
+      "url": "https://www.cnn.com/2019/07/09/entertainment/stranger-things-pop-culture/index.html",
+      "synopsis": "There are so many cool 1980's references in Season 3 of Stranger Things!",
+      "date": "7/9/19",
       "id": 5
     },
     {
-      "userId": 7,
-      "title": "yes",
-      "url": "no",
-      "synopsis": "yes",
-      "date": "no",
+      "userId": 3,
+      "title": "84 Tiny Houses That Will Convince You to Downsize",
+      "url": "https://www.countryliving.com/home-design/g1887/tiny-house/",
+      "synopsis": "Something about tiny houses, i think",
+      "date": "7/2/2019",
       "id": 6
+    },
+    {
+      "userId": 3,
+      "title": "How to Make a Dress Out of a Trash Bag",
+      "url": "https://www.leaf.tv/articles/how-to-make-a-dress-out-of-a-trash-bag/",
+      "synopsis": "Fashion-chic!",
+      "date": "7/9/19",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "title": "USWNT Welcomed Back Home at Newark Airport After World Cup Victory",
+      "url": "https://www.si.com/soccer/2019/07/08/uswnt-welcomed-back-home-womens-world-cup-winners-video",
+      "synopsis": "The USWNT are legends that deserve to be enshrined in gold and paraded about town!",
+      "date": "7/8/19",
+      "id": 8
+    },
+    {
+      "userId": 4,
+      "title": "6 Simple Tips on How To Start Writing Clean Code",
+      "url": "https://blog.alexdevero.com/6-simple-tips-writing-clean-code/",
+      "synopsis": "Tips for people on how to write cleaner code...I don't personally need this but others might.",
+      "date": "7/9/19",
+      "id": 9
+    },
+    {
+      "userId": 5,
+      "title": "The Pentagon Wants VR to Train for Nuclear War",
+      "url": "https://news.yahoo.com/pentagon-wants-vr-train-nuclear-132600336.html",
+      "synopsis": "Today's favorite gaming platforms are tomorrow's war weapons",
+      "date": "7/5/2019",
+      "id": 10
+    },
+    {
+      "userId": 5,
+      "title": "10 Reasons why Swimmers are the Best Kids",
+      "url": "https://swimswam.com/10-reasons-swimmers-best-kids/",
+      "synopsis": "Swimmers rule, Land-walkers drool!",
+      "date": "7/11/2017",
+      "id": 11
+    },
+    {
+      "userId": 6,
+      "title": "76 Best Boardgames of All Time",
+      "url": "https://www.listchallenges.com/92-best-board-games-of-all-time",
+      "synopsis": "Who doesn't need a list of 76 awesome boardgames?",
+      "date": "7/8/2019",
+      "id": 12
+    },
+    {
+      "userId": 6,
+      "title": "What to Do When Students Don't Like You",
+      "url": "https://juliawillwrite.blogspot.com/2019/05/what-to-do-when-students-dont-like-you.html",
+      "synopsis": "This hit home for me",
+      "date": "5/13/2019",
+      "id": 13
+    },
+    {
+      "userId": 7,
+      "title": "How to Win Friends and Influence People",
+      "url": "link",
+      "synopsis": "How to swindle strangers into following you",
+      "date": "7/11/19",
+      "id": 14
+    },
+    {
+      "userId": 7,
+      "title": "What your Dog really thinks about you",
+      "url": "www.dog.com",
+      "synopsis": "He doesn't like you",
+      "date": "7/11/19",
+      "id": 15
     }
   ],
   "events": [
     {
-      "userId": 7,
-      "event_name": "New timeStamp",
-      "date": "2019-07-11",
-      "time": "14:41",
-      "location": "Hackery",
-      "timestamp": 1562614885383,
-      "id": 2
+      "userId": 2,
+      "event_name": "Mentor Night",
+      "date": "2019-07-09",
+      "time": "17:30",
+      "location": "Tech Hill Commons",
+      "timestamp": 1562696997280,
+      "id": 3
     },
     {
-      "userId": 6,
-      "event_name": "running3 Edit",
-      "date": "2019-07-01",
-      "time": "16:30",
-      "location": "nashville",
-      "timestamp": 1562634066850,
+      "userId": 2,
+      "event_name": "Kirkpatrick Basketball Tuesday",
+      "date": "2019-06-16",
+      "time": "13:00",
+      "location": "620 S. 9th St. Nashville, TN",
+      "timestamp": 1562697102474,
       "id": 4
     },
     {
-      "userId": 6,
-      "event_name": "Running 4 Edits",
-      "date": "2019-07-09",
-      "time": "16:30",
-      "location": "Nolensville",
-      "timestamp": 1562634066858,
+      "userId": 3,
+      "event_name": "Outdoor Movie Night (Almost Famous)",
+      "date": "2019-07-19",
+      "time": "19:30",
+      "location": "Bicentennial Capitol Mall State Park",
+      "timestamp": 1562697939333,
       "id": 5
     },
     {
-      "userId": 1,
-      "event_name": "Running5",
-      "date": "2019-07-10",
-      "time": "17:00",
-      "location": "NSS",
-      "timestamp": 1562634066865,
+      "userId": 3,
+      "event_name": "The Art of Pair Programming with Todd Merritt",
+      "date": "2019-07-11",
+      "time": "17:30",
+      "location": "Vaco Offices, Brentwood, TN",
+      "timestamp": 1562698112012,
       "id": 6
     },
     {
-      "userId": 6,
-      "event_name": "test",
-      "date": "2019-07-17",
-      "time": "11:11",
-      "location": "1",
-      "timestamp": 1562700166231,
+      "userId": 4,
+      "event_name": "WEDNESDAY INDOOR GAME AT COLEMAN",
+      "date": "2019-07-10",
+      "time": "18:00",
+      "location": "Coleman",
+      "timestamp": 1562699039393,
       "id": 7
+    },
+    {
+      "userId": 4,
+      "event_name": "East Nashville Code and Coffee 1.07",
+      "date": "2019-07-13",
+      "time": "11:00",
+      "location": "620 Davidson St. Nashville, TN",
+      "timestamp": 1562699120057,
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "event_name": "Nashville VR Meetup",
+      "date": "2019-07-25",
+      "time": "18:00",
+      "location": "The Wond'ry",
+      "timestamp": 1562699457482,
+      "id": 9
+    },
+    {
+      "userId": 5,
+      "event_name": "Badass Lady Badass Brunch @ Pinewood Social",
+      "date": "2019-07-13",
+      "time": "09:00",
+      "location": "Pinewood Social",
+      "timestamp": 1562699529046,
+      "id": 10
+    },
+    {
+      "userId": 6,
+      "event_name": "Coding Jam",
+      "date": "2019-07-13",
+      "time": "14:30",
+      "location": "My House",
+      "timestamp": 1562699993924,
+      "id": 11
+    },
+    {
+      "userId": 6,
+      "event_name": "Cartoon Night",
+      "date": "2019-07-17",
+      "time": "20:00",
+      "location": "NSS",
+      "timestamp": 1562700095390,
+      "id": 12
+    },
+    {
+      "userId": 7,
+      "event_name": "Pinball Championship",
+      "date": "2019-11-05",
+      "time": "17:00",
+      "location": "NSS",
+      "timestamp": 1562702216459,
+      "id": 13
     }
   ],
   "tasks": [
@@ -189,46 +273,81 @@
       "id": 6
     },
     {
-      "userId": 12,
-      "task": "edited please again again",
-      "completedate": "2019-01-01",
-      "iscompleted": true,
+      "userId": 2,
+      "task": "Walk Buster",
+      "completedate": "2019-07-10",
+      "iscompleted": false,
       "id": 7
     },
     {
-      "userId": 7,
-      "task": "Clean everything",
-      "completedate": "2019-01-01",
-      "iscompleted": true,
+      "userId": 2,
+      "task": "Clean car",
+      "completedate": "2019-07-15",
+      "iscompleted": false,
       "id": 8
     },
     {
-      "userId": 7,
-      "task": "Clean Nothing at all",
-      "completedate": "2019-03-01",
-      "iscompleted": true,
+      "userId": 3,
+      "task": "Clean Sewage from Front Yard",
+      "completedate": "2019-07-12",
+      "iscompleted": false,
       "id": 9
     },
     {
-      "userId": 7,
-      "task": "Clean some things",
-      "completedate": "2021-03-03",
-      "iscompleted": true,
+      "userId": 3,
+      "task": "Front-end Capstone Project",
+      "completedate": "2019-08-16",
+      "iscompleted": false,
       "id": 10
     },
     {
-      "userId": 7,
-      "task": "new tassk",
-      "completedate": "2019-01-01",
+      "userId": 4,
+      "task": "Get New Car",
+      "completedate": "2019-07-16",
       "iscompleted": false,
       "id": 11
     },
     {
-      "userId": 6,
-      "task": "Danny CSS",
-      "completedate": "2019-07-08",
+      "userId": 4,
+      "task": "Fix Mac track-pad",
+      "completedate": "2019-07-11",
       "iscompleted": false,
       "id": 12
+    },
+    {
+      "userId": 5,
+      "task": "Clean up Danny's code",
+      "completedate": "2019-07-11",
+      "iscompleted": false,
+      "id": 13
+    },
+    {
+      "userId": 5,
+      "task": "Fix Dustin's broken code",
+      "completedate": "2019-07-09",
+      "iscompleted": false,
+      "id": 14
+    },
+    {
+      "userId": 6,
+      "task": "Pick up Celery",
+      "completedate": "2019-07-09",
+      "iscompleted": false,
+      "id": 15
+    },
+    {
+      "userId": 6,
+      "task": "Drop beets",
+      "completedate": "2019-07-10",
+      "iscompleted": false,
+      "id": 16
+    },
+    {
+      "userId": 7,
+      "task": "Lift Weights",
+      "completedate": "2019-07-12",
+      "iscompleted": false,
+      "id": 17
     }
   ],
   "messages": [
@@ -240,123 +359,74 @@
       "id": 1
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "help",
-      "timestamp": 1562600882228,
+      "userId": 2,
+      "username": "Dustin",
+      "message": "Hi everyone",
+      "timestamp": 1562696707052,
       "id": 2
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "help!",
-      "timestamp": 1562601092214,
+      "userId": 2,
+      "username": "Dustin",
+      "message": "Glad to be here",
+      "timestamp": 1562696725011,
       "id": 3
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "help again",
-      "timestamp": 1562601163842,
+      "userId": 3,
+      "username": "Krystal",
+      "message": "Hi guys, new to nutshell. How is everyone?",
+      "timestamp": 1562697591650,
       "id": 4
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "lets get this",
-      "timestamp": 1562601284725,
+      "userId": 3,
+      "username": "Krystal",
+      "message": "Did anyone read my article about tiny houses?",
+      "timestamp": 1562697815819,
       "id": 5
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "ds;flkjj",
-      "timestamp": 1562601320884,
+      "userId": 3,
+      "username": "Krystal",
+      "message": "Anyone want to see Almost Famous on Friday?",
+      "timestamp": 1562698185368,
       "id": 6
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "sdjfasdflkj;",
-      "timestamp": 1562601355757,
+      "userId": 4,
+      "username": "Danny",
+      "message": "Who here likes soccer?",
+      "timestamp": 1562698291982,
       "id": 7
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601444629,
+      "userId": 4,
+      "username": "Danny",
+      "message": "Just me? ok...",
+      "timestamp": 1562698298363,
       "id": 8
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601449687,
+      "userId": 5,
+      "username": "Tyler",
+      "message": "Hey guys, I'm Tyler...a/s/l?",
+      "timestamp": 1562699591615,
       "id": 9
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601452953,
+      "userId": 6,
+      "username": "Joe",
+      "message": "whats up guys...i'm JoeySheps",
+      "timestamp": 1562700220649,
       "id": 10
     },
     {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601455963,
-      "id": 11
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601458348,
-      "id": 12
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601461905,
-      "id": 13
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601464824,
-      "id": 14
-    },
-    {
-      "userId": 11,
-      "username": "f",
-      "message": "this is filler",
-      "timestamp": 1562601467788,
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "username": "tcarp55",
-      "message": "heyy",
-      "timestamp": 1562612150095,
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "username": "tcarp55",
-      "message": "you",
-      "timestamp": 1562612159319,
-      "id": 17
-    },
-    {
       "userId": 7,
-      "username": "Dustin",
-      "message": "goodbye",
-      "timestamp": 1562638254527,
-      "id": 18
+      "username": "Madi",
+      "message": "WAZZZZZUPPPPPPPPPPPPP",
+      "timestamp": 1562702282815,
+      "id": 11
     }
   ]
 }
