@@ -1,3 +1,11 @@
+const createByHTML = (obj) => {
+  let createdByStr = `
+  <h5>Created By: </h5>
+  <h7>${obj.user.username}
+  `
+  return createdByStr
+}
+
 const createEventFormHTML = id => {
   let formString =
   `
@@ -5,19 +13,19 @@ const createEventFormHTML = id => {
     <h3>Create Event</h3>
     <fieldset>
       <legend for="event-name-input">Name of Event</legend>
-      <input type="text" id="event-name-input" id="event-name" placeholder="Event Name">
+      <input type="text" id="event-name-input" placeholder="Event Name" class="form-control">
     </fieldset>
     <fieldset>
       <legend for="event-date-input">Date of Event</legend>
-      <input type="date" id="event-date-input" name="event-date" placeholder="Day of Event">
+      <input type="date" id="event-date-input" name="event-date" placeholder="Day of Event" class="form-control">
     </fieldset>
     <fieldset>
       <legend for="event-time-input">Time of Event</legend>
-      <input type="time" id="event-time-input" name="event-time" placeholder="hrs:mins">
+      <input type="time" id="event-time-input" name="event-time" placeholder="hrs:mins" class="form-control">
     </fieldset>
     <fieldset>
       <legend for="event-location-input">Location of Event</legend>
-      <input type="text" id="event-location-input" name="event-location" placeholder="Location of Event">
+      <input type="text" id="event-location-input" name="event-location" placeholder="Location of Event" class="form-control">
     </fieldset>
   `
   return formString
@@ -33,19 +41,19 @@ const createEventEditHTML = (id, name, date, time, location, timestamp) => {
     <h3>Edit Event</h3>
     <fieldset>
       <legend for="event-name-edit">Name of Event</legend>
-      <input type="text" id="event-name-edit" id="event-name" placeholder="Event Name" value="${name}">
+      <input type="text" id="event-name-edit" id="event-name" placeholder="Event Name" class="form-control" value="${name}">
     </fieldset>
     <fieldset>
       <legend for="event-date-edit">Date of Event</legend>
-      <input type="date" id="event-date-edit" name="event-date" placeholder="Day of Event" value="${date}">
+      <input type="date" id="event-date-edit" name="event-date" placeholder="Day of Event" class="form-control" value="${date}">
     </fieldset>
     <fieldset>
       <legend for="event-time-edit">Time of Event</legend>
-      <input type="time" id="event-time-edit" name="event-time" placeholder="hrs:mins" value="${time}">
+      <input type="time" id="event-time-edit" name="event-time" placeholder="hrs:mins" class="form-control" value="${time}">
     </fieldset>
     <fieldset>
       <legend for="event-location-edit">Location of Event</legend>
-      <input type="text" id="event-location-edit" name="event-location" placeholder="Location of Event" value="${location}">
+      <input type="text" id="event-location-edit" name="event-location" placeholder="Location of Event" class="form-control" value="${location}">
     </fieldset>
     <p id="event-timestamp-edit" hidden>${timestamp}</p>
   `
@@ -64,4 +72,4 @@ const createEventDOMHTML = eventData => {
   return stringForDOM
 }
 
-export {createEventFormHTML, createEventDOMHTML, createEventEditHTML}
+export {createEventFormHTML, createEventDOMHTML, createEventEditHTML, createByHTML}

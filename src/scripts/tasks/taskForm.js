@@ -14,6 +14,7 @@ function taskFormComponent () {
   let taskForm = document.createElement("form")
   taskForm.setAttribute("id", "new-task-form")
   let newTaskNameInput = document.createElement("input")
+  newTaskNameInput.setAttribute("class", "form-control")
   newTaskNameInput.setAttribute("type", "text")
   newTaskNameInput.setAttribute("name", "new-task-name")
   newTaskNameInput.setAttribute("id", "new-task-name")
@@ -22,6 +23,7 @@ function taskFormComponent () {
   newTaskLabel.textContent = "New Task Name:"
   let newTaskNameContainer = document.createElement("fieldset")
   let taskCompleteDateInput = document.createElement("input")
+  taskCompleteDateInput.setAttribute("class", "form-control")
   taskCompleteDateInput.setAttribute("type", "date")
   taskCompleteDateInput.setAttribute("name", "new-task-date")
   taskCompleteDateInput.setAttribute("id", "new-task-date")
@@ -103,6 +105,7 @@ function editTaskNameInput (event) {
  let parentDiv = document.querySelector(`#taskDiv${id}`)
  let inputField = document.createElement("input")
  inputField.setAttribute("type", "text")
+ inputField.setAttribute("class", "form-control")
  inputField.setAttribute("value", `${event.target.innerHTML}`)
  inputField.setAttribute("id", `editTaskInput-${id}` )
 parentDiv.replaceChild (inputField, taskNameChange)

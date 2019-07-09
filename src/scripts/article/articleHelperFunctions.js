@@ -11,26 +11,26 @@ function createArticleForm() {
   return `<form>
     <section>
       <fieldset>
-        <label>title</label>
-        <input type="text" name="article-title" id="article-title" />
+        <label>Title</label>
+        <input type="text" name="article-title" id="article-title" class="form-control"/>
       </fieldset>
     </section>
     <section>
       <fieldset>
         <label>URL</label>
-        <input type="text" name="article-url" id="article-url" />
+        <input type="text" name="article-url" id="article-url" class="form-control"/>
       </fieldset>
     </section>
     <section>
       <fieldset>
-        <label>synopsis</label>
-        <textarea name="article-synopsis" id="article-synopsis" cols="30" rows="5"></textarea>
+        <label>Synopsis</label>
+        <textarea name="article-synopsis" id="article-synopsis" cols="30" rows="5" class="form-control"></textarea>
       </fieldset>
     </section>
     <section>
         <fieldset>
-          <label>date</label>
-          <input type="text" name="article-date" id="article-date" />
+          <label>Date</label>
+          <input type="text" name="article-date" id="article-date" class="form-control"/>
         </fieldset>
       </section>
   </form>`;
@@ -49,10 +49,12 @@ function createSubmitArticleBtn(func) {
     let newArticle = {}
     if(document.querySelector("#article-id")){
       let articleId = document.querySelector("#article-id").value
-      newArticle = createArticle(userId, title, url, synopsis, date, articleId)
+      let articleTimestamp = document.querySelector("#article-timestamp").value
+      newArticle = createArticle(userId, title, url, synopsis, date,articleTimestamp, articleId)
     }
     else{
-      newArticle = createArticle(userId, title, url, synopsis, date, "");
+      let timestamp = Date.now()
+      newArticle = createArticle(userId, title, url, synopsis, date, timestamp, "");
     }
     console.log(newArticle);
     func("articles", newArticle).then(data => {
@@ -64,19 +66,21 @@ function createSubmitArticleBtn(func) {
   return SubmitBtn;
 }
 
-function createArticle(userId, title, url, synopsis, date, id) {
+function createArticle(userId, title, url, synopsis, date, timestamp, id) {
   return {
     userId,
     title,
     url,
     synopsis,
     date,
+    timestamp,
     id
   };
 }
 
 function articleToHTML(data) {
   return `
+    <h5>posted by: ${data.user.username}</h5>
     <h4>${data.title}</h4>
     <p>${data.synopsis}</p>
     <a href= ${data.url} target="_blank">link</a>
@@ -84,8 +88,12 @@ function articleToHTML(data) {
 }
 
 function createArticleCard(data){
+  let currentUser = +sessionStorage.getItem("userId")
   let articleCard = document.createElement("section")
-  articleCard.setAttribute("id", data.id)
+  articleCard.setAttribute("id", `article-${data.id}`)
+  if(data.userId !== currentUser){
+    articleCard.setAttribute("class", "friendStuff")
+  }
   articleCard.innerHTML = articleToHTML(data)
   let editBtn = document.createElement("button")
   editBtn.setAttribute("id", `edit-${data.id}`)
