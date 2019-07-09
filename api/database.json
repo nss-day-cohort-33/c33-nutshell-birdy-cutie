@@ -117,20 +117,20 @@
       "id": 3
     },
     {
-      "userId": 7,
-      "title": "go",
-      "url": "go",
-      "synopsis": "go",
-      "date": "go",
-      "id": 4
-    },
-    {
       "userId": 12,
       "title": "article",
       "url": "go",
       "synopsis": "yes",
       "date": "now",
       "id": 5
+    },
+    {
+      "userId": 7,
+      "title": "yes",
+      "url": "no",
+      "synopsis": "yes",
+      "date": "no",
+      "id": 6
     }
   ],
   "events": [
@@ -176,15 +176,43 @@
       "userId": 12,
       "task": "edited it again ",
       "completedate": "2019-12-31",
-      "iscompleted": false,
+      "iscompleted": true,
       "id": 6
     },
     {
       "userId": 12,
       "task": "edited please again again",
       "completedate": "2019-01-01",
-      "iscompleted": false,
+      "iscompleted": true,
       "id": 7
+    },
+    {
+      "userId": 7,
+      "task": "Clean everything",
+      "completedate": "2019-01-01",
+      "iscompleted": true,
+      "id": 8
+    },
+    {
+      "userId": 7,
+      "task": "Clean Nothing at all",
+      "completedate": "2019-03-01",
+      "iscompleted": true,
+      "id": 9
+    },
+    {
+      "userId": 7,
+      "task": "Clean some things",
+      "completedate": "2021-03-03",
+      "iscompleted": true,
+      "id": 10
+    },
+    {
+      "userId": 7,
+      "task": "new tassk",
+      "completedate": "2019-01-01",
+      "iscompleted": false,
+      "id": 11
     }
   ],
   "messages": [
@@ -306,6 +334,13 @@
       "message": "you",
       "timestamp": 1562612159319,
       "id": 17
+    },
+    {
+      "userId": 7,
+      "username": "Dustin",
+      "message": "goodbye",
+      "timestamp": 1562638254527,
+      "id": 18
     }
   ]
 }
