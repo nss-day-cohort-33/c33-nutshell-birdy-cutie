@@ -39,7 +39,8 @@ const editBtnListener = ( btn) => {
         let dateEdit = document.querySelector(`#eventDate-${eventId}`).textContent
         let timeEdit = document.querySelector(`#eventTime-${eventId}`).textContent
         let locationEdit = document.querySelector(`#eventLocation-${eventId}`).textContent
-        addEventEditForm(nameEdit, dateEdit, timeEdit, locationEdit, eventId)
+        let timestampEdit = document.querySelector(`#eventTimestamp-${eventId}`).textContent
+        addEventEditForm(nameEdit, dateEdit, timeEdit, locationEdit, timestampEdit, eventId)
     })
 }
 
@@ -64,8 +65,9 @@ const saveEditBtnListener = ( btn) => {
         let dateKey = document.querySelector("#event-date-edit").value
         let timeKey = document.querySelector("#event-time-edit").value
         let locationKey = document.querySelector("#event-location-edit").value
+        let timestampKey = document.querySelector("#event-timestamp-edit").textContent
         if (event_nameKey && dateKey && timeKey && locationKey) {
-            updateEventToDB(event_nameKey, dateKey, timeKey, locationKey, id)
+            updateEventToDB(event_nameKey, dateKey, timeKey, locationKey, timestampKey, id)
         }
     })
 }

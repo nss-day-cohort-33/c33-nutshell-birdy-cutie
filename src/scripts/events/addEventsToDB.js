@@ -28,20 +28,20 @@ const addEventToDB = (event_nameKey, dateKey, timeKey, locationKey) => {
 
 // This function updates the DB
 
-const updateEventToDB = (event_nameKey, dateKey, timeKey, locationKey, eventId) => {
+const updateEventToDB = (event_nameKey, dateKey, timeKey, locationKey, timestampKey, eventId) => {
     let domContainer = document.querySelector("#dashboard-container")
-    let newTimeStamp = createTimeStamp(clickDate())
     let currentUserId = +sessionStorage.getItem("userId")
     let userIdKey = currentUserId
     let event_nameValue = event_nameKey
     let dateValue = dateKey
     let timeValue = timeKey
     let locationValue = locationKey
-    let timestampKey = newTimeStamp
+    let timestampValue = timestampKey
     domContainer.innerHTML = ""
     mainEntryToDom(createNav(), createDashboard())
-    let editEventObj = createEventObj(userIdKey, event_nameValue, dateValue, timeValue, locationValue, timestampKey)
+    let editEventObj = createEventObj(userIdKey, event_nameValue, dateValue, timeValue, locationValue)
     // added the event id to the object so it can work with the editData() api call.
+    editEventObj.timestamp = timestampValue
     editEventObj.id = eventId
     API.editData("events", editEventObj).then( () => {
         populateDom()

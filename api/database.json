@@ -144,21 +144,21 @@
       "id": 2
     },
     {
-      "id": 4,
       "userId": 6,
-      "event_name": "running3",
+      "event_name": "running3 Edit",
       "date": "2019-07-01",
-      "location": "nashville",
       "time": "16:30",
-      "timestamp": 562600594630
+      "location": "nashville",
+      "timestamp": "1562634066850",
+      "id": 4
     },
     {
       "userId": 6,
-      "event_name": "Running 4",
+      "event_name": "Running 4 Edit",
       "date": "2019-07-09",
       "time": "16:30",
       "location": "Nolensville",
-      "timestamp": 1562631008694,
+      "timestamp": 1562634066858,
       "id": 5
     },
     {

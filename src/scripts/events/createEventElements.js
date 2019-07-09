@@ -36,12 +36,12 @@ const eventFormElement = () => {
 // This makes the edit form and takes the arguments of the event id and the previously
 // inputed values
 
-const eventEditElement = (name, date, time, location, eventId) => {
+const eventEditElement = (name, date, time, location, timestamp, eventId) => {
     let eventEditSection = document.createElement("section")
     let savEditBtn = document.createElement("button")
     let id = +sessionStorage.getItem("userId")
     eventEditSection.setAttribute("id", "event-edit")
-    eventEditSection.innerHTML = createEventEditHTML(id, name, date, time, location)
+    eventEditSection.innerHTML = createEventEditHTML(id, name, date, time, location, timestamp)
     savEditBtn.setAttribute("id", `${eventId}`)
     savEditBtn.innerHTML = "Update Event"
     saveEditBtnListener(savEditBtn)
