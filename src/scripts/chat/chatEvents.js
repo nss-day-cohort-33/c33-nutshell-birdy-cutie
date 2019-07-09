@@ -1,6 +1,8 @@
 import { API } from "../api";
 import { buildMessageObj, messageInputLength } from "./chatHelpers.js";
 import { populateDom } from "../main";
+import {usernameAddFriendFilter} from "./chatHelpers.js"
+import { createFriendObj } from "../friends/addFriendsToDB.js";
 
 function messageBtnListener() {
   let userId = +sessionStorage.getItem("userId");
@@ -66,8 +68,21 @@ function saveEditListener(event, messageEdit, editButtonIdNum) {
   }
 }
 
+function usernameAddFriendListener(userId){
+  let usernameId = +event.target.id.split("--")[1];
+  usernameAddFriendFilter(usernameId, userId).then(idArr => {
+    if (usernameId !== userId && idArr.length === 0) {
+      if (confirm("Are you sure you want to add this user?")) {
+        API.addData("friends", createFriendObj(userId, usernameId));
+        alert("You've got a new friend!")
+      }
+    }
+  });
+}
+
 export {
   messageBtnListener,
   checkUserIdChatListener,
-  editMessageButtonListener
+  editMessageButtonListener,
+  usernameAddFriendListener
 };

@@ -19,4 +19,4 @@ const addFriend = friendId => {
     let newFriendRelationshipObj = createFriendObj(currentUserId, friendUserId)
     API.addData("friends", newFriendRelationshipObj)
 }
-export {addFriend}
+export {addFriend, createFriendObj}
