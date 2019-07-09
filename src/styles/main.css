@@ -75,3 +75,11 @@ button {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
+
+  .friendStuff{
+      background-color: cornsilk;
+      font-style: italic;
+  }
+  .eventBackground {
+    background-color: #EDF0F0
+  }
