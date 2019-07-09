@@ -5,6 +5,7 @@ const addEventsToDOM = () => {
     let id = +sessionStorage.getItem("userId")
     console.log(id);
     let idArr = []
+    document.querySelector("#event-div").innerHTML = "<h4>Events</h4>"
     // call the friends DB
     API.getData("friends").then(data =>{
         // create an empty arr to send id's to
