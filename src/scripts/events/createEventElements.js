@@ -72,7 +72,7 @@ const addEventElementToDOM = (dataObj) => {
     // set the createdBy element to Hidden. On the double click of the article, the creator's username is made "visible"
     createdBy.setAttribute("id", `createdBy${dataObj.id}-user:${dataObj.userId}`)
     createdBy.innerHTML = createByHTML(dataObj)
-    createdBy.style.visibility = "hidden"
+    createdBy.style.display = "none"
     eventLog.appendChild(createdBy)
     eventLog.appendChild(newEventHTML)
     return eventLog

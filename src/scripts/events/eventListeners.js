@@ -6,7 +6,7 @@ import { API } from "../api.js";
 const showCreatedBy = (el, obj) => {
     el.addEventListener("dblclick", () => {
         // createdByElement(obj)
-        document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.visibility = "visible"
+        document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.display = "block"
         // then a second click event is added to the same element to hide the creator's username
         showEvent(el, obj)
     })
@@ -16,8 +16,8 @@ const showCreatedBy = (el, obj) => {
 // reveal the username
 const showEvent = (el, obj) => {
     el.addEventListener("dblclick", () => {
-        if (document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.visibility = "visible") {
-            document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.visibility = "hidden"
+        if (document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.display = "block") {
+            document.getElementById(`createdBy${obj.id}-user:${obj.userId}`).style.display = "none"
             showCreatedBy(el, obj)
         }
     })
