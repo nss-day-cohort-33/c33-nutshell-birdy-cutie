@@ -1,5 +1,5 @@
-import {createEventFormHTML, createEventDOMHTML, createEventEditHTML} from "./createEventHTML.js"
-import {delBtnListener, editBtnListener, saveBtnListener, saveEditBtnListener} from "./eventListeners"
+import {createEventFormHTML, createEventDOMHTML, createEventEditHTML, createByHTML} from "./createEventHTML.js"
+import {delBtnListener, editBtnListener, saveBtnListener, saveEditBtnListener, showCreatedBy} from "./eventListeners"
 // create funtion that makes HTML snippet to add events to DOM
 // being called in addEventsToDOM()
 
@@ -11,14 +11,27 @@ const eventsDOMElement = ( eventData) => {
     delEventBtn.setAttribute("id", `del-${eventData.id}`)
     editEventBtn.innerHTML = "Edit Event"
     delEventBtn.innerHTML = "Delete Event"
-    delBtnListener(delEventBtn)
+    delBtnListener(delEventBtn, eventData)
     editBtnListener(editEventBtn)
-    newHTML.setAttribute("id", `event-user:${eventData.userId}`)
+    newHTML.setAttribute("id", `event${eventData.id}-user:${eventData.userId}`)
     newHTML.innerHTML = createEventDOMHTML(eventData)
     newHTML.appendChild(delEventBtn)
     newHTML.appendChild(editEventBtn)
+    // this adds an event listener to newHTML that shows the creator's username
+    showCreatedBy(newHTML, eventData)
     return newHTML
 }
+
+// const createdByElement = (obj) => {
+//     let parentDiv = document.querySelector("#event-div")
+//     let newHTML = document.createElement("article")
+//     let replaceDiv = document.getElementById(`event-user:${obj.userId}`)
+//     newHTML.setAttribute("id", `createdBy-user:${obj.userId}`)
+//     newHTML.innerHTML = createByHTML(obj)
+//     showEvent(newHTML)
+//     parentDiv.replaceChild(newHTML, replaceDiv)
+//     return newHTML
+// }
 
 const eventFormElement = () => {
     let eventFormSection = document.createElement("section")
@@ -55,9 +68,16 @@ const eventEditElement = (name, date, time, location, timestamp, eventId) => {
 const addEventElementToDOM = (dataObj) => {
     let eventLog = document.querySelector("#event-div")
     let newEventHTML = eventsDOMElement(dataObj)
+    let createdBy = document.createElement("article")
+    // set the createdBy element to Hidden. On the double click of the article, the creator's username is made "visible"
+    createdBy.setAttribute("id", `createdBy${dataObj.id}-user:${dataObj.userId}`)
+    createdBy.innerHTML = createByHTML(dataObj)
+    createdBy.style.display = "none"
+    eventLog.appendChild(createdBy)
     eventLog.appendChild(newEventHTML)
     return eventLog
 }
+
 
 // This takes an array of objects and creates them into the HTML that will be added to the DOM.
 // Only events the current user created will have "delete" and "edit" buttons
