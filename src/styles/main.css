@@ -6,13 +6,13 @@
 #chat-message-div {
         border: 2px solid black;
         padding: 5px;
-        /* font: 24px/36px sans-serif; */
         width: 200px;
-        height: 200px;
+        height: 650px;
         overflow: scroll;
         position: relative;
         bottom: 0;
-}
+      }
+
 .hvr-float-shadow {
     display: inline-block;
     vertical-align: middle;
