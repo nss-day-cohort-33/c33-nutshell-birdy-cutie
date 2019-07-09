@@ -80,6 +80,7 @@ function createArticle(userId, title, url, synopsis, date, timestamp, id) {
 
 function articleToHTML(data) {
   return `
+    <h5>posted by: ${data.user.username}</h5>
     <h4>${data.title}</h4>
     <p>${data.synopsis}</p>
     <a href= ${data.url} target="_blank">link</a>
@@ -88,7 +89,7 @@ function articleToHTML(data) {
 
 function createArticleCard(data){
   let articleCard = document.createElement("section")
-  articleCard.setAttribute("id", data.id)
+  articleCard.setAttribute("id", `article-${data.id}`)
   articleCard.innerHTML = articleToHTML(data)
   let editBtn = document.createElement("button")
   editBtn.setAttribute("id", `edit-${data.id}`)

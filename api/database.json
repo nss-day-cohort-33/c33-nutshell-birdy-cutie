@@ -98,6 +98,21 @@
       "userId_1": 1,
       "userId_2": 6,
       "id": 5
+    },
+    {
+      "userId_1": 11,
+      "userId_2": 1,
+      "id": 6
+    },
+    {
+      "userId_1": 11,
+      "userId_2": 6,
+      "id": 7
+    },
+    {
+      "userId_1": 11,
+      "userId_2": 2,
+      "id": 8
     }
   ],
   "articles": [
@@ -106,7 +121,9 @@
       "userId": 1,
       "url": "https://www.cnbc.com/2019/07/01/here-are-the-biggest-stock-winners-from-the-us-china-trade-ceasefire.html",
       "title": "Here are the biggest stock winners from the US-China trade ceasefire",
-      "synopsis": "somethings happened"
+      "synopsis": "somethings happened",
+      "date": "f",
+      "timestamp": 1562698980519
     },
     {
       "userId": 11,
@@ -114,6 +131,7 @@
       "url": "ij;ozfij;oje",
       "synopsis": "hope this works",
       "date": "f",
+      "timestamp": 1562698980520,
       "id": 3
     },
     {
@@ -122,6 +140,7 @@
       "url": "go",
       "synopsis": "yes",
       "date": "now",
+      "timestamp": 1562698980521,
       "id": 5
     },
     {
@@ -130,7 +149,17 @@
       "url": "no",
       "synopsis": "yes",
       "date": "no",
+      "timestamp": 1562698980522,
       "id": 6
+    },
+    {
+      "userId": 1,
+      "title": "dude",
+      "url": "sdflk;j",
+      "synopsis": "dsf;kjlsdfkjldfs;lkj",
+      "date": "d",
+      "timestamp": 1562698980523,
+      "id": 7
     }
   ],
   "events": [
