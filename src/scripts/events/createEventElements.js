@@ -18,7 +18,7 @@ const eventsDOMElement = ( eventData) => {
     delBtnListener(delEventBtn, eventData)
     editBtnListener(editEventBtn)
     newHTML.setAttribute("id", `event${eventData.id}-user:${eventData.userId}`)
-    newHTML.setAttribute("style", "background-color: #E8E6E6")
+    newHTML.setAttribute("class", "eventBackground")
     newHTML.innerHTML = createEventDOMHTML(eventData)
     newHTML.appendChild(delEventBtn)
     newHTML.appendChild(editEventBtn)
@@ -92,6 +92,7 @@ const createEventListElements = (obj, currId) => {
     // this removes the edit and delete buttons on all events that are not created by the
     // current user
     if (obj.userId !== currId) {
+        document.getElementById(`event${obj.id}-user:${obj.userId}`).setAttribute("class", "friendStuff")
         document.querySelector(`#del-${obj.id}`).remove()
         document.querySelector(`#edit-${obj.id}`).remove()
     }

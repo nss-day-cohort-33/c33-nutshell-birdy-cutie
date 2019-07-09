@@ -88,8 +88,12 @@ function articleToHTML(data) {
 }
 
 function createArticleCard(data){
+  let currentUser = +sessionStorage.getItem("userId")
   let articleCard = document.createElement("section")
   articleCard.setAttribute("id", `article-${data.id}`)
+  if(data.userId !== currentUser){
+    articleCard.setAttribute("class", "friendStuff")
+  }
   articleCard.innerHTML = articleToHTML(data)
   let editBtn = document.createElement("button")
   editBtn.setAttribute("id", `edit-${data.id}`)
