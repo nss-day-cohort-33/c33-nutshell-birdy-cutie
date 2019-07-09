@@ -12,10 +12,10 @@ const addEventForm = () => {
 
 // this creates an edit form that takes the arguments of the already inputed values.
 
-const addEventEditForm = (name, date, time, location, eventId) => {
+const addEventEditForm = (name, date, time, location, timestamp, eventId) => {
   const domContainer = document.querySelector("#data-container")
   domContainer.innerHTML = ""
-  domContainer.appendChild(eventEditElement(name, date, time, location, eventId))
+  domContainer.appendChild(eventEditElement(name, date, time, location, timestamp, eventId))
 }
 
   export {addEventForm, addEventEditForm}

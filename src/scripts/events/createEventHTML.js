@@ -26,7 +26,7 @@ const createEventFormHTML = id => {
 // this creates the html for the edit form that takes the values of what has already been
 // inputed by the user
 
-const createEventEditHTML = (id, name, date, time, location) => {
+const createEventEditHTML = (id, name, date, time, location, timestamp) => {
   let editFormString =
   `
     <p id="user-id" hidden>${id}</p>
@@ -47,6 +47,7 @@ const createEventEditHTML = (id, name, date, time, location) => {
       <legend for="event-location-edit">Location of Event</legend>
       <input type="text" id="event-location-edit" name="event-location" placeholder="Location of Event" value="${location}">
     </fieldset>
+    <p id="event-timestamp-edit" hidden>${timestamp}</p>
   `
   return editFormString
 }
@@ -58,6 +59,7 @@ const createEventDOMHTML = eventData => {
     <p id="eventDate-${eventData.id}">${eventData.date}</p>
     <p id="eventTime-${eventData.id}">${eventData.time}</p>
     <p id="eventLocation-${eventData.id}">${eventData.location}</p>
+    <p id="eventTimestamp-${eventData.id}" hidden>${eventData.timestamp}</p>
   `
   return stringForDOM
 }
